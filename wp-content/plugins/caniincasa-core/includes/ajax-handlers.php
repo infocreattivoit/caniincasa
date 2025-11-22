@@ -719,3 +719,39 @@ function caniincasa_ajax_filter_centri() {
 }
 add_action( 'wp_ajax_filter_centri', 'caniincasa_ajax_filter_centri' );
 add_action( 'wp_ajax_nopriv_filter_centri', 'caniincasa_ajax_filter_centri' );
+
+
+/**
+ * AJAX Handler: Filter Toelettature
+ * Uses generic handler
+ */
+function caniincasa_ajax_filter_toelettature() {
+	caniincasa_filter_structure_handler(
+		'toelettature',
+		'filter_toelettature_nonce',
+		'struttura-card',
+		'Nessuna toelettatura trovata',
+		'strutture-pagination',
+		'Navigazione toelettature'
+	);
+}
+add_action( 'wp_ajax_filter_toelettature', 'caniincasa_ajax_filter_toelettature' );
+add_action( 'wp_ajax_nopriv_filter_toelettature', 'caniincasa_ajax_filter_toelettature' );
+
+
+/**
+ * AJAX Handler: Filter Aree Cani
+ * Uses generic handler
+ */
+function caniincasa_ajax_filter_aree_cani() {
+	caniincasa_filter_structure_handler(
+		'aree_cani',
+		'filter_aree_cani_nonce',
+		'struttura-card',
+		'Nessuna area cani trovata',
+		'strutture-pagination',
+		'Navigazione aree cani'
+	);
+}
+add_action( 'wp_ajax_filter_aree_cani', 'caniincasa_ajax_filter_aree_cani' );
+add_action( 'wp_ajax_nopriv_filter_aree_cani', 'caniincasa_ajax_filter_aree_cani' );
