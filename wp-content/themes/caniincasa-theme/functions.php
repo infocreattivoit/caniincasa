@@ -171,7 +171,7 @@ function caniincasa_scripts() {
     }
 
     // Strutture styles (conditional)
-    $strutture_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili' );
+    $strutture_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili', 'toelettature', 'aree_cani' );
     if ( is_singular( $strutture_types ) || is_post_type_archive( $strutture_types ) || is_tax( 'provincia' ) ) {
         wp_enqueue_style( 'caniincasa-strutture', CANIINCASA_THEME_URI . '/assets/css/strutture.css', array( 'caniincasa-main' ), CANIINCASA_VERSION );
     }
