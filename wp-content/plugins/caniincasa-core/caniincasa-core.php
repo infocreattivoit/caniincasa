@@ -110,6 +110,9 @@ class Caniincasa_Core {
         // Razze JSON Importer
         require_once CANIINCASA_CORE_PATH . 'includes/razze-json-importer.php';
 
+        // Ad System (Banner Pubblicitari)
+        require_once CANIINCASA_CORE_PATH . 'includes/ad-system.php';
+
         // WP-CLI Commands
         if ( defined( 'WP_CLI' ) && WP_CLI ) {
             require_once CANIINCASA_CORE_PATH . 'includes/wp-cli-commands.php';

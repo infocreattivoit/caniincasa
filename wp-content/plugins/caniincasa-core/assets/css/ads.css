@@ -1,0 +1,164 @@
+/**
+ * Frontend Styles - Banner Pubblicitari
+ */
+
+/* Container Banner */
+.caniincasa-ad {
+    margin: 30px 0;
+    text-align: center;
+    clear: both;
+}
+
+/* Hide all by default, show only matching device */
+.caniincasa-ad .ad-desktop,
+.caniincasa-ad .ad-tablet,
+.caniincasa-ad .ad-mobile {
+    display: none;
+}
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+    .caniincasa-ad .ad-desktop {
+        display: block;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .caniincasa-ad .ad-tablet {
+        display: block;
+    }
+
+    /* Fallback to desktop if no tablet version */
+    .caniincasa-ad:not(:has(.ad-tablet)) .ad-desktop {
+        display: block;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .caniincasa-ad .ad-mobile {
+        display: block;
+    }
+
+    /* Fallback to tablet or desktop if no mobile version */
+    .caniincasa-ad:not(:has(.ad-mobile)) .ad-tablet {
+        display: block;
+    }
+
+    .caniincasa-ad:not(:has(.ad-mobile)):not(:has(.ad-tablet)) .ad-desktop {
+        display: block;
+    }
+}
+
+/* Posizioni Specifiche */
+
+/* Global Header */
+.caniincasa-ad-global_header {
+    margin-top: 0;
+}
+
+/* Global Footer */
+.caniincasa-ad-global_footer {
+    margin-bottom: 0;
+}
+
+/* Sidebar Ads */
+.caniincasa-ad[data-position*="sidebar"] {
+    margin: 20px 0;
+}
+
+/* Homepage - After Hero */
+.caniincasa-ad-home_after_hero {
+    margin: 40px 0;
+}
+
+/* Archive - Top */
+.caniincasa-ad[data-position*="archive"][data-position*="top"] {
+    margin-bottom: 30px;
+}
+
+/* Archive - Middle (in grid) */
+.caniincasa-ad[data-position*="archive"][data-position*="middle"] {
+    grid-column: 1 / -1; /* Full width in grid */
+    margin: 30px 0;
+}
+
+/* Calculator/Comparatore - After Results/Table */
+.caniincasa-ad[data-position*="after_results"],
+.caniincasa-ad[data-position*="after_table"] {
+    margin-top: 40px;
+}
+
+/* Dashboard */
+.caniincasa-ad[data-position*="dashboard"] {
+    margin: 25px 0;
+}
+
+/* Responsive iframe */
+.caniincasa-ad iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sticky Sidebar Ads (optional) */
+.caniincasa-ad.sticky-ad {
+    position: sticky;
+    top: 80px; /* Below header */
+    z-index: 10;
+}
+
+/* Loading placeholder (optional) */
+.caniincasa-ad.loading {
+    min-height: 250px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caniincasa-ad.loading::before {
+    content: "Caricamento banner...";
+    color: #999;
+    font-size: 14px;
+}
+
+/* Ad Label (opzionale) */
+.caniincasa-ad::before {
+    content: "Pubblicità";
+    display: block;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Remove label for global ads */
+.caniincasa-ad-global_header::before,
+.caniincasa-ad-global_footer::before {
+    display: none;
+}
+
+/* Spacing adjustments per mobile */
+@media (max-width: 767px) {
+    .caniincasa-ad {
+        margin: 20px 0;
+    }
+
+    .caniincasa-ad-home_after_hero {
+        margin: 25px 0;
+    }
+}
+
+/* Print - Hide all ads */
+@media print {
+    .caniincasa-ad {
+        display: none !important;
+    }
+}
+
+/* Ad Blocker Detection (optional) */
+.caniincasa-ad[data-blocked="true"] {
+    display: none;
+}
