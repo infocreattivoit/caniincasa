@@ -122,8 +122,10 @@ while ( have_posts() ) :
                             <div class="servizi-list">
                                 <?php foreach ( $servizi_offerti as $servizio ) : ?>
                                     <div class="servizio-item">
-                                        <span class="icon">✓</span>
-                                        <?php echo esc_html( $servizio ); ?>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="servizio-icon">
+                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#4CAF50"/>
+                                        </svg>
+                                        <span><?php echo esc_html( $servizio ); ?></span>
                                     </div>
                                 <?php endforeach; ?>
                             </div>

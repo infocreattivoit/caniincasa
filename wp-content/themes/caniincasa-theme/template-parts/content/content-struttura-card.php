@@ -1,16 +1,20 @@
 <?php
 /**
  * Template part for displaying Generic Struttura Card
- * Works for: veterinari, canili, pensioni_per_cani, centri_cinofili
+ * Works for: veterinari, canili, pensioni_per_cani, centri_cinofili, toelettature, aree_cani
  *
  * @package Caniincasa
  */
 
 $indirizzo = get_field( 'indirizzo' );
-$citta     = get_field( 'citta' );
+$localita  = get_field( 'localita' );
+$citta     = get_field( 'citta' ); // Fallback per strutture vecchie
 $provincia = get_field( 'provincia' );
 $telefono  = get_field( 'telefono' );
 $email     = get_field( 'email' );
+
+// Use localita if available, otherwise use citta
+$location = $localita ? $localita : $citta;
 
 // Get post type labels
 $post_type = get_post_type();
@@ -34,7 +38,7 @@ $tipo_struttura = $post_type_obj->labels->singular_name;
         <div class="struttura-card-content">
 
             <!-- Location -->
-            <?php if ( $indirizzo || $citta || $provincia ) : ?>
+            <?php if ( $location || $provincia ) : ?>
                 <div class="card-info-item">
                     <span class="info-icon">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -43,17 +47,8 @@ $tipo_struttura = $post_type_obj->labels->singular_name;
                     </span>
                     <span class="info-text">
                         <?php
-                        $location_parts = array();
-                        if ( $indirizzo ) {
-                            $location_parts[] = $indirizzo;
-                        }
-                        if ( $citta && $citta !== $indirizzo ) {
-                            $location_parts[] = $citta;
-                        }
-                        if ( $provincia ) {
-                            $location_parts[] = $provincia;
-                        }
-                        echo esc_html( implode( ', ', array_filter( $location_parts ) ) );
+                        $location_parts = array_filter( array( $location, $provincia ) );
+                        echo esc_html( implode( ', ', $location_parts ) );
                         ?>
                     </span>
                 </div>

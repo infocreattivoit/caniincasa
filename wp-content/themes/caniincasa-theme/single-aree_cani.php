@@ -46,9 +46,9 @@ while ( have_posts() ) :
                 <!-- Main Content -->
                 <div class="struttura-main-content">
 
-                    <!-- Info Box -->
+                    <!-- Info & Caratteristiche Unified Box -->
                     <div class="struttura-info-box">
-                        <h2 class="box-title">Informazioni Area</h2>
+                        <h2 class="box-title">Informazioni e Caratteristiche</h2>
 
                         <div class="info-grid">
                             <?php if ( $indirizzo || $localita || $provincia || $cap ) : ?>
@@ -71,7 +71,7 @@ while ( have_posts() ) :
                             <?php endif; ?>
 
                             <?php if ( $tipo_area && is_array( $tipo_area ) && count( $tipo_area ) > 0 ) : ?>
-                                <div class="info-item">
+                                <div class="info-item full-width">
                                     <span class="info-label">Tipo Area:</span>
                                     <span class="info-value"><?php echo esc_html( implode( ', ', $tipo_area ) ); ?></span>
                                 </div>
@@ -80,7 +80,7 @@ while ( have_posts() ) :
                             <?php if ( $superficie ) : ?>
                                 <div class="info-item">
                                     <span class="info-label">Superficie:</span>
-                                    <span class="info-value"><?php echo esc_html( $superficie ); ?> mq</span>
+                                    <span class="info-value"><?php echo esc_html( number_format( $superficie, 0, ',', '.' ) ); ?> mq</span>
                                 </div>
                             <?php endif; ?>
 
@@ -93,7 +93,7 @@ while ( have_posts() ) :
                         </div>
                     </div>
 
-                    <!-- Descrizione -->
+                    <!-- Content -->
                     <?php if ( get_the_content() ) : ?>
                         <div class="struttura-description">
                             <h2>Descrizione</h2>
@@ -110,8 +110,10 @@ while ( have_posts() ) :
                             <div class="servizi-list">
                                 <?php foreach ( $servizi_disponibili as $servizio ) : ?>
                                     <div class="servizio-item">
-                                        <span class="icon">✓</span>
-                                        <?php echo esc_html( $servizio ); ?>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="servizio-icon">
+                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#4CAF50"/>
+                                        </svg>
+                                        <span><?php echo esc_html( $servizio ); ?></span>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
