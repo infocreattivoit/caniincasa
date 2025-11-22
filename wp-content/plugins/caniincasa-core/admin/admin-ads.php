@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 'home_between_sections',
                 'home_before_footer',
             );
-            self::render_positions( $home_positions, $positions, $devices, $ads );
+            render_positions( $home_positions, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h3>Archivio Razze</h3>
             <?php
             $razze_archive = array( 'archive_razze_top', 'archive_razze_sidebar', 'archive_razze_middle' );
-            self::render_positions( $razze_archive, $positions, $devices, $ads );
+            render_positions( $razze_archive, $positions, $devices, $ads );
             ?>
 
             <h3>Singola Razza</h3>
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 'single_razza_after_desc',
                 'single_razza_before_related',
             );
-            self::render_positions( $razze_single, $positions, $devices, $ads );
+            render_positions( $razze_single, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -84,13 +84,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h3>Archivio Strutture</h3>
             <?php
             $strutture_archive = array( 'archive_strutture_top', 'archive_strutture_sidebar', 'archive_strutture_middle' );
-            self::render_positions( $strutture_archive, $positions, $devices, $ads );
+            render_positions( $strutture_archive, $positions, $devices, $ads );
             ?>
 
             <h3>Singola Struttura</h3>
             <?php
             $strutture_single = array( 'single_struttura_sidebar_top', 'single_struttura_sidebar_bottom' );
-            self::render_positions( $strutture_single, $positions, $devices, $ads );
+            render_positions( $strutture_single, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -100,13 +100,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h3>Archivio Annunci</h3>
             <?php
             $annunci_archive = array( 'archive_annunci_top', 'archive_annunci_sidebar', 'archive_annunci_middle' );
-            self::render_positions( $annunci_archive, $positions, $devices, $ads );
+            render_positions( $annunci_archive, $positions, $devices, $ads );
             ?>
 
             <h3>Singolo Annuncio</h3>
             <?php
             $annunci_single = array( 'single_annuncio_sidebar_top', 'single_annuncio_sidebar_bottom' );
-            self::render_positions( $annunci_single, $positions, $devices, $ads );
+            render_positions( $annunci_single, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -116,13 +116,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h3>Calcolatori</h3>
             <?php
             $calc_positions = array( 'calculator_sidebar', 'calculator_after_results' );
-            self::render_positions( $calc_positions, $positions, $devices, $ads );
+            render_positions( $calc_positions, $positions, $devices, $ads );
             ?>
 
             <h3>Comparatore Razze</h3>
             <?php
             $comp_positions = array( 'comparatore_sidebar', 'comparatore_after_table' );
-            self::render_positions( $comp_positions, $positions, $devices, $ads );
+            render_positions( $comp_positions, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -132,13 +132,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h3>Archivio Blog</h3>
             <?php
             $blog_archive = array( 'archive_blog_top', 'archive_blog_sidebar' );
-            self::render_positions( $blog_archive, $positions, $devices, $ads );
+            render_positions( $blog_archive, $positions, $devices, $ads );
             ?>
 
             <h3>Articolo Singolo</h3>
             <?php
             $blog_single = array( 'single_post_sidebar', 'single_post_content' );
-            self::render_positions( $blog_single, $positions, $devices, $ads );
+            render_positions( $blog_single, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -147,7 +147,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h2>Banner Dashboard Utente</h2>
             <?php
             $dashboard_positions = array( 'dashboard_sidebar', 'dashboard_top' );
-            self::render_positions( $dashboard_positions, $positions, $devices, $ads );
+            render_positions( $dashboard_positions, $positions, $devices, $ads );
             ?>
         </div>
 
@@ -157,7 +157,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p class="description">I banner globali vengono visualizzati su tutte le pagine del sito.</p>
             <?php
             $global_positions = array( 'global_header', 'global_footer', 'global_sidebar' );
-            self::render_positions( $global_positions, $positions, $devices, $ads );
+            render_positions( $global_positions, $positions, $devices, $ads );
             ?>
         </div>
 
