@@ -1002,3 +1002,220 @@ ID,Title,Taglia,Gruppo FCI
 - Status: ✅ Pronto per merge
 - Documentazione: `PR_DESCRIPTION.md`, `CREA_PR.md`
 
+---
+
+### 2025-11-22: Importatore JSON Razze con Status Bozza 🆕
+
+**Implementato**:
+- Importatore JSON completo per razze di cani con tutti i campi ACF
+- **Razze sempre importate in BOZZA** per revisione manuale pre-pubblicazione
+- Supporto import completo: tassonomie + campi base + contenuti testuali
+- Calcolo automatico campi calcolatori intelligenti:
+  - `taglia_standard`: Calcolata automaticamente dal peso medio
+  - Coefficienti età (cucciolo/adulto/senior): Basati su taglia per calcolo età umana
+  - Pesi ideali maschio/femmina: Auto-calcolati con -10% per femmine
+  - Livello attività: Derivato dal campo energia
+  - Costi mantenimento (alimentazione/veterinario/toelettatura): Basati su taglia + caratteristiche razza
+  - Predisposizioni salute: Conversione da scala 1-5 a bassa/media/alta
+- Update razze esistenti se stesso slug (no duplicati)
+- Validazione completa formato JSON e campi obbligatori
+- Log dettagliato con statistiche: importate, aggiornate, errori
+- Admin page dedicata in Razze → Importa JSON
+
+**File JSON di esempio**:
+- `dog_breeds (1).json` con 36 razze complete pronte all'import
+- Formato conforme a tutti i campi ACF richiesti
+
+**Formato JSON richiesto**:
+```json
+{
+  "titolo": "Nome Razza",
+  "slug": "nome-razza",
+  "taglia": "Piccola|Media|Grande|Gigante|Toy",
+  "gruppo_fci": 1-10 (0 se non FCI),
+  "nazione_origine": "Paese",
+  "peso_medio_min": kg,
+  "peso_medio_max": kg,
+  "aspettativa_vita_min": anni,
+  "aspettativa_vita_max": anni,
+  "altezza_min": cm,
+  "altezza_max": cm,
+  // 21 caratteristiche (valori 1.0-5.0)
+  "affettuosita": 3.5,
+  "intelligenza": 4.5,
+  // ... etc
+  // 7 sezioni contenuti HTML
+  "descrizione_generale": "<p>...</p>",
+  "origini_storia": "<p>...</p>",
+  // ... etc
+}
+```
+
+**Workflow consigliato**:
+1. Importa JSON → razze create in bozza
+2. Revisiona ogni razza (testi, dati)
+3. Aggiungi immagini manualmente (featured + gallery)
+4. Pubblica razze verificate
+
+**File creati**:
+- `wp-content/plugins/caniincasa-core/includes/razze-json-importer.php`
+- `GUIDA_IMPORTAZIONE_JSON_RAZZE.md` (documentazione completa)
+
+**File modificati**:
+- `wp-content/plugins/caniincasa-core/caniincasa-core.php` (include importer)
+
+**Commit**: Branch `claude/setup-main-branch-01B5EdpMx4CjMhUJWhFM7DMn` (commit 2794056)
+
+---
+
+### 2025-11-22: Report Funzionalità Implementate vs Brief 🆕
+
+**Creato**:
+- Report completo analisi funzionalità esistenti vs brief
+- File: `REPORT_FUNZIONALITA_IMPLEMENTATE.md`
+
+**Contenuti Report**:
+
+#### ✅ Funzionalità Completamente Implementate:
+
+**1. Comparatore Razze** (Brief §12.1 - PRIORITÀ MASSIMA)
+- ✅ Confronto fino a 3 razze side-by-side
+- ✅ Ricerca autocomplete razze
+- ✅ Layout responsive (side-by-side desktop, swipe mobile)
+- ✅ Confronto parametri: fisici, caratteriali, cure, ambiente, famiglia
+- ✅ URL condivisibile con razze preselezionate
+- File: `page-comparatore-razze.php` + `inc/comparatore-ajax.php`
+
+**2. 4 Calcolatori Interattivi** (Brief §12.3 - PRIORITÀ MASSIMA)
+- ✅ **Calcolatore Età Umana**: 3 metodi calcolo + grafico + consigli
+- ✅ **Calcolatore Peso Ideale**: Quiz BCS + piano settimanale + timeline
+- ✅ **Calcolatore Costi**: Breakdown completo + grafico + consigli risparmio
+- ✅ **Calcolatore Cibo**: 3 modalità (Crocchette/BARF/Casalinga) + ricette
+- File: 4 page templates + 4 inc logic + 4 CSS + 4 JS + ACF fields
+
+**3. Mega Menu Categorizzazione** (Brief §12.2 - PRIORITÀ MASSIMA)
+- ✅ 2 modalità: Colonne Automatiche + HTML Personalizzato
+- ✅ Configurazione via WordPress Menu admin
+- ✅ Responsive: dropdown desktop + accordion mobile
+- ✅ Shortcode dinamico per menu razze
+- File: `inc/mega-menu.php` + documentazione
+
+**4. Plugin Paw Stars** (NON nel brief originale)
+- ✅ Sistema social/gamification completo
+- ✅ Profili cani con foto e voti (5 reazioni)
+- ✅ Classifiche Hot Dogs + All Stars
+- ✅ Sistema badge/achievements (10 badge)
+- ✅ REST API completa (11 endpoints)
+- ✅ Swipe cards mobile-first
+- Plugin completo: `caniincasa-pawstars/`
+
+**5. Generatore Contenuti AI** (NON nel brief originale)
+- ✅ Integrazione ChatGPT API (OpenAI)
+- ✅ Meta box Classic Editor
+- ✅ Supporto tutti post type
+- ✅ Configurazione modelli (GPT-4o, GPT-4o-mini, GPT-3.5)
+- File: `includes/ai-content-generator.php`
+
+**6. Generatore Shortcode** (NON nel brief originale)
+- ✅ UI visuale per generare shortcode
+- ✅ Preview in tempo reale
+- ✅ Shortcode: razze_grid, razze_carousel, annunci_lista, strutture_mappa
+- File: `includes/shortcode-generator.php`
+
+**7. Sistema Messaggistica Completo** (Brief §6)
+- ✅ Messaggi privati con threading
+- ✅ Blocco utenti bidirezionale
+- ✅ Notifiche email
+- ✅ Badge messaggi non letti
+- ✅ Integrazione con annunci
+- File: `includes/messaging-system.php` + documentazione
+
+**8. Sistema Newsletter** (Brief §9)
+- ✅ Iscrizione newsletter frontend
+- ✅ Segmentazione subscribers
+- ✅ Double opt-in + GDPR compliant
+- File: `includes/newsletter-system.php`
+
+**9. Sistema Statistiche** (Brief §9)
+- ✅ Tracking visite razze/annunci/strutture
+- ✅ Dashboard analytics admin
+- ✅ Report esportabili
+- File: `includes/statistics-system.php`
+
+**10. Sistema Storie Cani** (Brief §3.6)
+- ✅ CPT storie_cani per user-generated content
+- ✅ Invio storie da frontend + moderazione admin
+- ✅ Template archivio + singola storia
+- File: `inc/stories-system.php`
+
+**11. Dashboard Utente Frontend** (Brief §6)
+- ✅ Design mobile-first con tab navigation
+- ✅ Gestione completa annunci (bozza → pubblicato → scaduto)
+- ✅ Messaggi (inbox + sent)
+- ✅ Preferiti (razze, annunci, strutture)
+- ✅ Tab Paw Stars (se plugin attivo)
+- ✅ No accesso wp-admin per non-admin
+- File: `inc/dashboard.php` + `template-dashboard.php`
+
+**12. 3 Importatori Dati**
+- ✅ CSV generico per strutture (5 tipologie)
+- ✅ CSV razze tassonomie (con dry-run)
+- ✅ JSON razze completo (con status bozza + calcolo campi)
+- File: 3 importer + 2 guide complete
+
+**13. SEO & Schema.org** (Brief §9)
+- ✅ Sistema redirect 301 con old_slug
+- ✅ Meta title/description custom
+- ✅ Schema.org markup (LocalBusiness, Breed)
+- ✅ Breadcrumbs JSON-LD
+- ✅ Sitemap XML dinamica
+- File: `inc/seo-*.php` + `inc/schema-org.php`
+
+**14. Customizer Tema** (Brief §5)
+- ✅ Palette colori completa
+- ✅ 30+ Google Fonts
+- ✅ Font size responsive
+- ✅ Dark mode toggle
+- ✅ Layout globale configurabile
+- File: `inc/customizer.php`
+
+**15. Mobile & Performance** (Brief §4)
+- ✅ Mobile-first design completo
+- ✅ Hamburger menu + bottom navigation
+- ✅ Lazy loading immagini
+- ✅ WebP + fallback
+- ✅ Infinite scroll
+- ✅ Touch-friendly (min 44x44px)
+
+#### ❌ Funzionalità Mancanti (da Brief §12):
+
+**1. CPT Guide** (`guida_cani`) - PRIORITÀ MEDIA
+- [ ] CPT con 4 categorie: Primo Cane, Salute, Educazione, Vita Quotidiana
+- [ ] Template con TOC auto, tempo lettura, checklist, PDF download
+- [ ] 10 guide prioritarie da scrivere
+
+**2. CPT Magazine** (`magazine`) - PRIORITÀ MEDIA
+- [ ] CPT con categorie: News, Storie, Interviste, Prodotti, Viaggi, Nutrizione, Sport
+- [ ] Template magazine focus visual
+- [ ] 5 articoli launch
+
+**3. Quiz Selezione Razza** - PRIORITÀ ALTA (da verificare stato)
+- [ ] Quiz 9 domande con algoritmo matching
+- [ ] Output top 10 razze + % compatibilità
+- [ ] PDF scaricabile + share social
+- [ ] Storico quiz nel profilo utente
+- **Nota**: Esiste `template-quiz-razza.php` - verificare implementazione
+
+#### 📊 Statistiche Implementazione:
+
+- **Stato Progetto**: ~85% completo rispetto al brief
+- **Funzionalità Extra**: 7 (non previste nel brief)
+- **Template Tema**: 21 page templates
+- **Include Tema**: 18 file
+- **Plugin Core**: 16 includes
+- **Plugin Totali**: 3 (core, import-categories, pawstars)
+
+**Commit Report**: Branch `claude/setup-main-branch-01B5EdpMx4CjMhUJWhFM7DMn`
+
+---
+
