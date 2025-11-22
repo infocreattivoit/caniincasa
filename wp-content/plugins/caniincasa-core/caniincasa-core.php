@@ -107,6 +107,9 @@ class Caniincasa_Core {
         // Razze CSV Importer
         require_once CANIINCASA_CORE_PATH . 'includes/razze-csv-importer.php';
 
+        // Razze JSON Importer
+        require_once CANIINCASA_CORE_PATH . 'includes/razze-json-importer.php';
+
         // WP-CLI Commands
         if ( defined( 'WP_CLI' ) && WP_CLI ) {
             require_once CANIINCASA_CORE_PATH . 'includes/wp-cli-commands.php';
