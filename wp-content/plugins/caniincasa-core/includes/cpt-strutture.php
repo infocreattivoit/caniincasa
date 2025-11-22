@@ -1,12 +1,13 @@
 <?php
 /**
- * Custom Post Types: Strutture (5 tipologie)
+ * Custom Post Types: Strutture (6 tipologie)
  *
  * - Allevamenti
  * - Veterinari
  * - Canili
  * - Pensioni per Cani
  * - Centri Cinofili
+ * - Toelettature
  *
  * @package Caniincasa_Core
  */
@@ -54,6 +55,13 @@ function caniincasa_register_strutture_cpts() {
             'slug'     => 'centri-cinofili',
             'icon'     => 'dashicons-awards',
             'desc'     => 'Directory centri cinofili e scuole addestramento',
+        ),
+        'toelettature' => array(
+            'singular' => 'Toelettatura',
+            'plural'   => 'Toelettature',
+            'slug'     => 'toelettature',
+            'icon'     => 'dashicons-scissors',
+            'desc'     => 'Directory toelettature e grooming per cani',
         ),
     );
 
@@ -142,7 +150,7 @@ function caniincasa_register_provincia_taxonomy() {
         'menu_name'         => __( 'Province', 'caniincasa-core' ),
     );
 
-    $post_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili' );
+    $post_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili', 'toelettature' );
 
     register_taxonomy( 'provincia', $post_types, array(
         'hierarchical'      => true,
@@ -243,7 +251,7 @@ function caniincasa_strutture_columns( $columns ) {
 }
 
 // Apply to all structure CPTs
-$struttura_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili' );
+$struttura_types = array( 'allevamenti', 'veterinari', 'canili', 'pensioni_per_cani', 'centri_cinofili', 'toelettature' );
 foreach ( $struttura_types as $type ) {
     add_filter( "manage_{$type}_posts_columns", 'caniincasa_strutture_columns' );
 }
