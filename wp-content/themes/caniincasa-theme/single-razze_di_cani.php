@@ -81,6 +81,8 @@ get_header();
                         </div>
                     <?php endif; ?>
 
+                    <?php do_action( 'caniincasa_single_razza_after_desc' ); ?>
+
                     <!-- Carattere e Temperamento -->
                     <?php
                     $carattere = get_field( 'carattere_temperamento' );
@@ -313,6 +315,8 @@ get_header();
                         <?php caniincasa_social_share_buttons(); ?>
                     </div>
 
+                    <?php do_action( 'caniincasa_single_razza_before_related' ); ?>
+
                     <!-- Related Razze -->
                     <?php
                     $terms = get_the_terms( get_the_ID(), 'razza_taglia' );
@@ -378,6 +382,8 @@ get_header();
 
                 <!-- Sidebar (1/3) -->
                 <aside class="razza-sidebar">
+
+                    <?php do_action( 'caniincasa_single_razza_sidebar_top' ); ?>
 
                     <!-- Immagine Razza -->
                     <?php if ( has_post_thumbnail() ) : ?>
@@ -584,6 +590,8 @@ get_header();
                     <?php if ( is_active_sidebar( 'sidebar-razze' ) ) : ?>
                         <?php dynamic_sidebar( 'sidebar-razze' ); ?>
                     <?php endif; ?>
+
+                    <?php do_action( 'caniincasa_single_razza_sidebar_bottom' ); ?>
 
                 </aside>
 

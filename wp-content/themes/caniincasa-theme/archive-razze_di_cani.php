@@ -31,6 +31,8 @@ get_header();
             <!-- Sidebar Filtri -->
             <aside class="razze-filters-sidebar">
 
+                <?php do_action( 'caniincasa_archive_razze_sidebar' ); ?>
+
                 <div class="filters-box">
                     <div class="filters-header">
                         <h3>🔍 Filtra Razze</h3>
@@ -185,6 +187,8 @@ get_header();
 
             <!-- Grid Razze -->
             <div class="razze-main-content">
+
+                <?php do_action( 'caniincasa_archive_razze_top' ); ?>
 
                 <!-- Results Counter -->
                 <div class="results-header">

@@ -89,6 +89,8 @@ get_header();
 		</div>
 	</section>
 
+	<?php do_action( 'caniincasa_home_after_hero' ); ?>
+
 	<!-- Annunci 4 Zampe Section -->
 	<section id="annunci-section" class="annunci-section">
 		<div class="container">
@@ -200,6 +202,8 @@ get_header();
 			</div>
 		</div>
 	</section>
+
+	<?php do_action( 'caniincasa_home_between_sections' ); ?>
 
 	<!-- Database Razze Section -->
 	<section class="razze-section">
@@ -560,6 +564,8 @@ get_header();
 			</div>
 		</div>
 	</div>
+
+	<?php do_action( 'caniincasa_home_before_footer' ); ?>
 
 </main>
 
