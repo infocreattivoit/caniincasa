@@ -244,6 +244,8 @@ while ( have_posts() ) :
             </div>
         </div>
 
+        <?php do_action( 'caniincasa_single_struttura_before_footer' ); ?>
+
     </main>
 
     <?php

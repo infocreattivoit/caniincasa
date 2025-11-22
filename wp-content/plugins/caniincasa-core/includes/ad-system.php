@@ -42,13 +42,15 @@ class Caniincasa_Ad_System {
         'single_razza_before_related' => 'Razza Singola - Prima Razze Correlate',
 
         // Archivi Strutture (tutti)
-        'archive_strutture_top'     => 'Archivio Strutture - Top',
-        'archive_strutture_sidebar' => 'Archivio Strutture - Sidebar',
-        'archive_strutture_middle'  => 'Archivio Strutture - Middle',
+        'archive_strutture_top'          => 'Archivio Strutture - Top',
+        'archive_strutture_sidebar'      => 'Archivio Strutture - Sidebar',
+        'archive_strutture_middle'       => 'Archivio Strutture - Middle',
+        'archive_strutture_before_footer' => 'Archivio Strutture - Prima del Footer',
 
         // Single Struttura
         'single_struttura_sidebar_top'    => 'Struttura Singola - Sidebar Top',
         'single_struttura_sidebar_bottom' => 'Struttura Singola - Sidebar Bottom',
+        'single_struttura_before_footer'  => 'Struttura Singola - Prima del Footer',
 
         // Archivi Annunci
         'archive_annunci_top'     => 'Archivio Annunci - Top',
@@ -319,10 +321,12 @@ class Caniincasa_Ad_System {
         add_action( 'caniincasa_archive_strutture_top', array( __CLASS__, 'hook_archive_strutture_top' ) );
         add_action( 'caniincasa_archive_strutture_sidebar', array( __CLASS__, 'hook_archive_strutture_sidebar' ) );
         add_action( 'caniincasa_archive_strutture_middle', array( __CLASS__, 'hook_archive_strutture_middle' ) );
+        add_action( 'caniincasa_archive_strutture_before_footer', array( __CLASS__, 'hook_archive_strutture_before_footer' ) );
 
         // Single Struttura
         add_action( 'caniincasa_single_struttura_sidebar_top', array( __CLASS__, 'hook_single_struttura_sidebar_top' ) );
         add_action( 'caniincasa_single_struttura_sidebar_bottom', array( __CLASS__, 'hook_single_struttura_sidebar_bottom' ) );
+        add_action( 'caniincasa_single_struttura_before_footer', array( __CLASS__, 'hook_single_struttura_before_footer' ) );
 
         // Archive Annunci
         add_action( 'caniincasa_archive_annunci_top', array( __CLASS__, 'hook_archive_annunci_top' ) );
@@ -411,12 +415,20 @@ class Caniincasa_Ad_System {
         self::display_ad( 'archive_strutture_middle' );
     }
 
+    public static function hook_archive_strutture_before_footer() {
+        self::display_ad( 'archive_strutture_before_footer' );
+    }
+
     public static function hook_single_struttura_sidebar_top() {
         self::display_ad( 'single_struttura_sidebar_top' );
     }
 
     public static function hook_single_struttura_sidebar_bottom() {
         self::display_ad( 'single_struttura_sidebar_bottom' );
+    }
+
+    public static function hook_single_struttura_before_footer() {
+        self::display_ad( 'single_struttura_before_footer' );
     }
 
     public static function hook_archive_annunci_top() {

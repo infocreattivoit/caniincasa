@@ -83,13 +83,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h2>Banner Strutture</h2>
             <h3>Archivio Strutture</h3>
             <?php
-            $strutture_archive = array( 'archive_strutture_top', 'archive_strutture_sidebar', 'archive_strutture_middle' );
+            $strutture_archive = array( 'archive_strutture_top', 'archive_strutture_sidebar', 'archive_strutture_middle', 'archive_strutture_before_footer' );
             render_positions( $strutture_archive, $positions, $devices, $ads );
             ?>
 
             <h3>Singola Struttura</h3>
             <?php
-            $strutture_single = array( 'single_struttura_sidebar_top', 'single_struttura_sidebar_bottom' );
+            $strutture_single = array( 'single_struttura_sidebar_top', 'single_struttura_sidebar_bottom', 'single_struttura_before_footer' );
             render_positions( $strutture_single, $positions, $devices, $ads );
             ?>
         </div>

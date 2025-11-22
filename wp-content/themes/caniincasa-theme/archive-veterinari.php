@@ -193,6 +193,8 @@ get_header();
         </div>
     </div>
 
+    <?php do_action( 'caniincasa_archive_strutture_before_footer' ); ?>
+
 </main>
 
 <script>
