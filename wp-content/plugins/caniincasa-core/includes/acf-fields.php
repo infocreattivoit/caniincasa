@@ -989,3 +989,9 @@ function caniincasa_register_allevamenti_acf_fields() {
     ) );
 }
 caniincasa_register_allevamenti_acf_fields();
+
+/**
+ * Include ACF fields for other structure types
+ * (Toelettature, Aree Cani, etc.)
+ */
+require_once CANIINCASA_CORE_PATH . 'includes/acf-fields-strutture.php';
