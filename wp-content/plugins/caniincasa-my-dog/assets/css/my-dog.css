@@ -1,0 +1,398 @@
+/**
+ * Caniincasa My Dog - Frontend Styles
+ */
+
+/* === DASHBOARD === */
+.my-dogs-dashboard {
+	max-width: 1200px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.dogs-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 30px;
+	margin: 30px 0;
+}
+
+/* === DOG CARD === */
+.dog-card {
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	overflow: hidden;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dog-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dog-card-photo {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	background: #f5f5f5;
+	position: relative;
+}
+
+.dog-card-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.dog-placeholder {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dog-card-content {
+	padding: 20px;
+}
+
+.dog-name {
+	margin: 0 0 5px;
+	font-size: 24px;
+	color: #333;
+}
+
+.dog-breed {
+	margin: 0 0 15px;
+	color: #FF6B35;
+	font-weight: 500;
+}
+
+.dog-info {
+	margin: 15px 0;
+}
+
+.dog-info-item {
+	display: flex;
+	margin: 8px 0;
+	font-size: 14px;
+}
+
+.dog-info-item .label {
+	font-weight: 600;
+	margin-right: 8px;
+	color: #666;
+}
+
+.dog-info-item .value {
+	color: #333;
+}
+
+.human-age {
+	font-size: 12px;
+	color: #999;
+	margin-left: 5px;
+}
+
+.dog-card-actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+	padding-top: 15px;
+	border-top: 1px solid #eee;
+}
+
+/* === BUTTONS === */
+.btn {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.btn-primary {
+	background: #FF6B35;
+	color: white;
+}
+
+.btn-primary:hover {
+	background: #ff5419;
+}
+
+.btn-secondary {
+	background: #667eea;
+	color: white;
+}
+
+.btn-secondary:hover {
+	background: #5568d3;
+}
+
+.btn-danger {
+	background: #f44336;
+	color: white;
+}
+
+.btn-danger:hover {
+	background: #d32f2f;
+}
+
+.btn-sm {
+	padding: 6px 12px;
+	font-size: 12px;
+}
+
+/* === FORMS === */
+.dog-form {
+	max-width: 800px;
+	margin: 30px auto;
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 14px;
+	transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: #FF6B35;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+/* === VACCINATION CALENDAR === */
+.vaccination-calendar {
+	max-width: 1000px;
+	margin: 30px auto;
+}
+
+.upcoming-vaccinations {
+	background: #fff3cd;
+	border: 2px solid #ffc107;
+	padding: 20px;
+	border-radius: 8px;
+	margin: 20px 0;
+}
+
+.upcoming-vaccinations h4 {
+	margin: 0 0 15px;
+	color: #856404;
+}
+
+.upcoming-vaccinations ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.upcoming-vaccinations li {
+	margin: 5px 0;
+	color: #856404;
+}
+
+.add-vaccination-form,
+.add-weight-form {
+	background: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	margin: 25px 0;
+}
+
+.add-vaccination-form h4,
+.add-weight-form h4 {
+	margin: 0 0 20px;
+	color: #333;
+}
+
+.vaccination-history,
+.weight-chart {
+	margin: 30px 0;
+}
+
+.vaccinations-table,
+.weight-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.vaccinations-table thead,
+.weight-table thead {
+	background: #f5f5f5;
+}
+
+.vaccinations-table th,
+.weight-table th,
+.vaccinations-table td,
+.weight-table td {
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+.badge {
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.badge-warning {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.badge-danger {
+	background: #f8d7da;
+	color: #721c24;
+}
+
+/* === CALCULATORS === */
+.dog-calculator {
+	max-width: 600px;
+	margin: 30px auto;
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dog-calculator h3 {
+	margin: 0 0 10px;
+	color: #333;
+}
+
+.dog-calculator p {
+	margin: 0 0 25px;
+	color: #666;
+}
+
+.calculator-result {
+	margin-top: 30px;
+}
+
+.result-box {
+	background: #e8f5e9;
+	border: 2px solid #4CAF50;
+	border-radius: 8px;
+	padding: 25px;
+}
+
+.result-box h4 {
+	margin: 0 0 15px;
+	color: #2e7d32;
+}
+
+.result-content p {
+	margin: 10px 0;
+	font-size: 16px;
+	color: #333;
+}
+
+.result-content .note {
+	margin-top: 20px;
+	padding-top: 15px;
+	border-top: 1px solid #c8e6c9;
+	font-size: 13px;
+	color: #666;
+	font-style: italic;
+}
+
+/* === WEIGHT TRACKER === */
+.weight-chart {
+	background: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	margin: 25px 0;
+}
+
+.text-success {
+	color: #4CAF50;
+	font-weight: 600;
+}
+
+.text-danger {
+	color: #f44336;
+	font-weight: 600;
+}
+
+/* === MISC === */
+.no-data {
+	text-align: center;
+	padding: 40px 20px;
+	color: #999;
+	font-style: italic;
+}
+
+.alert {
+	padding: 15px 20px;
+	border-radius: 8px;
+	margin: 20px 0;
+}
+
+.alert-warning {
+	background: #fff3cd;
+	border: 1px solid #ffc107;
+	color: #856404;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+	.dogs-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.form-row {
+		grid-template-columns: 1fr;
+	}
+
+	.dog-card-actions {
+		flex-direction: column;
+	}
+
+	.dog-card-actions .btn {
+		width: 100%;
+	}
+}
