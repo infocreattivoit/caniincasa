@@ -1,0 +1,1059 @@
+[
+  {
+    "titolo": "Area Cani Parco Sempione",
+    "slug": "area-cani-parco-sempione-milano",
+    "descrizione": "<p>L'area cani del Parco Sempione è una delle più frequentate e conosciute di Milano. Situata nel cuore del parco, vicino all'Arena Civica, offre un ampio spazio recintato dove i cani possono correre e giocare in libertà.</p><p>L'area è ben mantenuta dal Comune di Milano con manutenzione settimanale. È molto frequentata specialmente nei weekend e nelle sere d'estate, ed è un punto d'incontro per molti proprietari di cani del centro città.</p>",
+    "indirizzo": "Parco Sempione - Arena Civica",
+    "localita": "Milano",
+    "provincia": "MI",
+    "cap": "20121",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 800,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari del parco: 6:30-21:00 inverno, 6:30-23:00 estate",
+    "regolamento": "I cani devono essere tenuti al guinzaglio fino all'ingresso nell'area recintata\nÈ obbligatorio raccogliere le deiezioni del proprio cane\nVietato l'accesso a cani aggressivi o femmine in calore\nI proprietari sono responsabili del comportamento dei propri cani\nMassimo 2 cani per proprietario",
+    "accessibilita": "Completamente accessibile. Cancello ampio, terreno pianeggiante, panchine presenti"
+  },
+  {
+    "titolo": "Area Cani Villa Borghese - Porta Pinciana",
+    "slug": "area-cani-villa-borghese-porta-pinciana-roma",
+    "descrizione": "<p>L'area cani di Villa Borghese è una delle più grandi e attrezzate di Roma. Situata vicino a Porta Pinciana, offre circa 1200 mq di spazio recintato con doppia area separata per cani di piccola e grande taglia.</p><p>L'area è molto frequentata, specialmente nei weekend, ed è ben ombreggiata da alberi secolari. La gestione è curata dal Comune di Roma con manutenzione regolare. È presente anche un piccolo percorso agility per l'addestramento.</p>",
+    "indirizzo": "Villa Borghese - Porta Pinciana",
+    "localita": "Roma",
+    "provincia": "RM",
+    "cap": "00197",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 1200,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h (l'area è sempre aperta, il parco ha orari 7:00-20:00 inverno, 7:00-21:00 estate)",
+    "regolamento": "I cani devono essere tenuti al guinzaglio fino all'area recintata\nRaccolta obbligatoria delle deiezioni\nVietato l'accesso a cani aggressivi\nFemmine in calore devono rimanere nell'area piccola\nI proprietari sono responsabili del comportamento dei propri animali\nRispettare la divisione piccola/grande taglia\nVietato lasciare i cani incustoditi",
+    "accessibilita": "Completamente accessibile. Ingressi ampi, terreno pianeggiante con ghiaia, panchine multiple. Accesso facilitato per persone con disabilità"
+  },
+  {
+    "titolo": "Area Cani Parco Valentino",
+    "slug": "area-cani-parco-valentino-torino",
+    "descrizione": "<p>Nel cuore del Parco Valentino di Torino, lungo il Po, si trova un'ampia area cani recintata di circa 600 mq. Posizione panoramica con vista sul fiume.</p><p>Frequentata da proprietari di cani del centro e delle zone limitrofe. Ombreggiata e ben tenuta, offre uno spazio sicuro per la socializzazione dei cani.</p>",
+    "indirizzo": "Parco del Valentino - Viale Medaglie d'Oro",
+    "localita": "Torino",
+    "provincia": "TO",
+    "cap": "10126",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 600,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccogliere sempre le deiezioni\nCani al guinzaglio fino all'area\nVietato l'accesso a cani aggressivi\nVietato introdurre cibo nell'area\nSorvegliare sempre i propri cani",
+    "accessibilita": "Accessibile con rampa di accesso. Terreno in ghiaia ben livellato"
+  },
+  {
+    "titolo": "Area Cani Giardini Margherita",
+    "slug": "area-cani-giardini-margherita-bologna",
+    "descrizione": "<p>I Giardini Margherita di Bologna ospitano una delle aree cani più popolari della città. Spazio di circa 500 mq recintato con doppio cancello di sicurezza.</p><p>Molto frequentata da studenti universitari e famiglie. Ambiente giovane e dinamico con buona socializzazione tra cani.</p>",
+    "indirizzo": "Giardini Margherita - Via Castiglione",
+    "localita": "Bologna",
+    "provincia": "BO",
+    "cap": "40124",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-22:00 estate, 7:00-20:00 inverno",
+    "regolamento": "Raccolta deiezioni obbligatoria\nCani al guinzaglio fino all'ingresso area\nVietati cani aggressivi e femmine in calore\nMassimo 2 cani a persona\nVietato fumare nell'area",
+    "accessibilita": "Accessibile. Cancello largo, terreno pianeggiante, panchine disponibili"
+  },
+  {
+    "titolo": "Area Cani Parco delle Cascine",
+    "slug": "area-cani-parco-cascine-firenze",
+    "descrizione": "<p>Il Parco delle Cascine offre una grande area cani di circa 1000 mq situata nella parte centrale del parco. Una delle più ampie aree cani di Firenze.</p><p>Ben attrezzata con giochi per cani e percorso agility base. Molto frequentata da fiorentini e turisti con cani. Manutenzione regolare da parte del Comune.</p>",
+    "indirizzo": "Parco delle Cascine - Piazzale delle Cascine",
+    "localita": "Firenze",
+    "provincia": "FI",
+    "cap": "50144",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 1000,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h (il parco è sempre accessibile)",
+    "regolamento": "Raccolta obbligatoria deiezioni\nGuinzaglio obbligatorio fino all'area\nVietato accesso cani aggressivi\nSorvegliare costantemente i propri cani\nRispettare separazione aree piccola/grande taglia\nProprietari responsabili di eventuali danni",
+    "accessibilita": "Completamente accessibile. Ingressi multipli, terreno misto ghiaia/erba, panchine ombreggiate"
+  },
+  {
+    "titolo": "Area Cani Parco di Nervi",
+    "slug": "area-cani-parco-nervi-genova",
+    "descrizione": "<p>Splendida area cani con vista mare situata all'interno del Parco di Nervi a Genova. Spazio di circa 400 mq recintato immerso nel verde mediterraneo.</p><p>Posizione privilegiata con vista panoramica sul mare. Frequentata da residenti del quartiere e turisti. Ambiente tranquillo e rilassante.</p>",
+    "indirizzo": "Parco di Nervi - Passeggiata Anita Garibaldi",
+    "localita": "Genova",
+    "provincia": "GE",
+    "cap": "16167",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Aperta dalle 7:00 alle 20:00 tutto l'anno",
+    "regolamento": "Obbligo raccolta deiezioni\nCani al guinzaglio fuori dall'area\nVietato l'accesso a cani non vaccinati\nVietate femmine in calore\nMassimo 3 cani per proprietario",
+    "accessibilita": "Parzialmente accessibile. Terreno in leggera pendenza ma percorribile. Cancello standard"
+  },
+  {
+    "titolo": "Area Cani Foro Italico",
+    "slug": "area-cani-foro-italico-palermo",
+    "descrizione": "<p>Area cani recintata al Foro Italico di Palermo, affacciata sul mare. Spazio di circa 350 mq con vista panoramica sul Golfo di Palermo.</p><p>Aperta di recente, moderna e ben attrezzata. Popolare tra i palermitani per passeggiate serali. Brezza marina rende piacevole la permanenza anche d'estate.</p>",
+    "indirizzo": "Foro Italico Umberto I",
+    "localita": "Palermo",
+    "provincia": "PA",
+    "cap": "90133",
+    "tipo_area": [
+      "Recintata",
+      "Per cani di taglia grande"
+    ],
+    "superficie": 350,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nVietato accesso cani aggressivi\nSorvegliare i propri animali\nVietato introdurre oggetti pericolosi\nRispettare gli altri fruitori",
+    "accessibilita": "Completamente accessibile. Percorso pianeggiante, cancello ampio, parcheggio nelle vicinanze"
+  },
+  {
+    "titolo": "Area Cani Villa Bellini",
+    "slug": "area-cani-villa-bellini-catania",
+    "descrizione": "<p>Area cani situata all'interno della storica Villa Bellini di Catania. Spazio recintato di circa 450 mq immerso nel verde storico del giardino.</p><p>Ben ombreggiata da alberi secolari. Frequentata da residenti del centro storico. Manutenzione curata dall'amministrazione comunale.</p>",
+    "indirizzo": "Villa Bellini - Via Etnea",
+    "localita": "Catania",
+    "provincia": "CT",
+    "cap": "95131",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 450,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari villa: 7:00-20:00 inverno, 7:00-22:00 estate",
+    "regolamento": "Raccolta obbligatoria deiezioni\nGuinzaglio fino all'area recintata\nVietato accesso cani aggressivi o in calore\nProprietari responsabili del comportamento dei cani\nRispettare pulizia e decoro dell'area",
+    "accessibilita": "Accessibile. Terreno pianeggiante, cancello standard, panchine ombreggiate"
+  },
+  {
+    "titolo": "Area Cani Parco 2 Giugno",
+    "slug": "area-cani-parco-2-giugno-bari",
+    "descrizione": "<p>Grande area cani nel Parco 2 Giugno di Bari, uno degli spazi verdi più ampi della città. Circa 700 mq recintati con doppia separazione per taglie diverse.</p><p>Molto frequentata soprattutto nei weekend. Ben attrezzata con giochi e percorso agility. Punto di ritrovo per appassionati cinofili.</p>",
+    "indirizzo": "Parco 2 Giugno - Via Generale Bellomo",
+    "localita": "Bari",
+    "provincia": "BA",
+    "cap": "70126",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 700,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nCani al guinzaglio fino all'area\nVietati cani aggressivi\nRispettare separazione piccola/grande taglia\nMassimo 2 cani per persona\nVietato lasciare cani incustoditi",
+    "accessibilita": "Completamente accessibile. Ingressi ampi, terreno in ghiaia livellato, panchine multiple"
+  },
+  {
+    "titolo": "Area Cani Parco Nord Milano",
+    "slug": "area-cani-parco-nord-milano",
+    "descrizione": "<p>Una delle aree cani più grandi della zona nord di Milano, situata nel vasto Parco Nord. Oltre 1500 mq di spazio recintato con diverse zone tematiche.</p><p>Area molto attrezzata con percorso agility completo, zona cuccioli separata e area relax con panchine ombreggiate. Gestita da volontari in collaborazione con il Comune.</p>",
+    "indirizzo": "Parco Nord Milano - Via Clerici",
+    "localita": "Milano",
+    "provincia": "MI",
+    "cap": "20162",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)",
+      "Per cani di piccola taglia"
+    ],
+    "superficie": 1500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria delle deiezioni\nCani al guinzaglio fino all'ingresso area\nArea cuccioli riservata a cani sotto 1 anno o peso inferiore a 10kg\nVietato accesso cani aggressivi o femmine in calore\nI proprietari devono sorvegliare costantemente i propri cani\nRispettare le diverse zone tematiche\nMassimo 3 cani per proprietario",
+    "accessibilita": "Completamente accessibile con rampe. Terreno misto erba/ghiaia. Parcheggio dedicato a 50m"
+  },
+  {
+    "titolo": "Area Cani Giardini Reali Torino",
+    "slug": "area-cani-giardini-reali-torino",
+    "descrizione": "<p>Area cani storica situata nei prestigiosi Giardini Reali di Torino, di fronte a Palazzo Reale. Spazio raccolto di circa 300 mq in posizione centralissima.</p><p>Frequentatissima da residenti del centro e turisti. Nonostante le dimensioni contenute è molto apprezzata per la posizione strategica.</p>",
+    "indirizzo": "Giardini Reali - Piazzetta Reale",
+    "localita": "Torino",
+    "provincia": "TO",
+    "cap": "10122",
+    "tipo_area": [
+      "Recintata",
+      "Per cani di piccola taglia"
+    ],
+    "superficie": 300,
+    "servizi_disponibili": [
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari Giardini: 7:30-19:30 inverno, 7:30-21:00 estate",
+    "regolamento": "Raccolta deiezioni obbligatoria\nArea preferibilmente per cani piccola taglia (max 15kg)\nCani al guinzaglio fino all'area\nVietato fumare\nMassimo 2 cani per persona",
+    "accessibilita": "Accessibile. Cancello standard, terreno in ghiaia fine, panchine disponibili"
+  },
+  {
+    "titolo": "Area Cani CityLife Milano",
+    "slug": "area-cani-citylife-milano",
+    "descrizione": "<p>Modernissima area cani nel quartiere CityLife di Milano. Design contemporaneo con pavimentazione drenante di ultima generazione e attrezzature innovative.</p><p>Una delle aree più moderne d'Italia, inaugurata nel 2020. Molto frequentata da residenti del nuovo quartiere. Illuminazione LED a risparmio energetico.</p>",
+    "indirizzo": "Parco CityLife - Via Spinola",
+    "localita": "Milano",
+    "provincia": "MI",
+    "cap": "20149",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 650,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni con sacchetti forniti\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nVideosorveglianza attiva h24\nRispettare le norme di comportamento",
+    "accessibilita": "Completamente accessibile. Rampe di accesso, pavimentazione antisdrucciolo, parcheggio disabili a 30m"
+  },
+  {
+    "titolo": "Area Cani Villa Ada Roma",
+    "slug": "area-cani-villa-ada-roma",
+    "descrizione": "<p>Ampia area cani situata all'interno di Villa Ada, uno dei parchi più grandi di Roma. Spazio di circa 900 mq immerso nel verde con alberi ad alto fusto.</p><p>Molto apprezzata per l'ampiezza e la tranquillità. Frequentata da proprietari della zona Parioli e Trieste. Ben ombreggiata anche in estate.</p>",
+    "indirizzo": "Villa Ada Savoia - Via di Ponte Salario",
+    "localita": "Roma",
+    "provincia": "RM",
+    "cap": "00135",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 900,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-20:00 inverno, 7:00-23:00 estate",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio obbligatorio fino all'area recintata\nVietato introdurre cibo nell'area\nI proprietari sono responsabili dei propri cani\nVietato accesso a cani non vaccinati",
+    "accessibilita": "Parzialmente accessibile. Terreno naturale con lievi pendenze. Cancello standard"
+  },
+  {
+    "titolo": "Area Cani Parco Don Bosco Bologna",
+    "slug": "area-cani-parco-don-bosco-bologna",
+    "descrizione": "<p>Area cani nel Parco Don Bosco in zona San Donato, Bologna. Spazio di circa 550 mq con doppio cancello di sicurezza e zona separata per cuccioli.</p><p>Frequentata da residenti del quartiere. Ben tenuta grazie all'impegno di un gruppo di volontari. Atmosfera familiare e accogliente.</p>",
+    "indirizzo": "Parco Don Bosco - Via San Donato",
+    "localita": "Bologna",
+    "provincia": "BO",
+    "cap": "40127",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 550,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nRispettare separazione aree\nCani al guinzaglio fino all'ingresso\nVietati cani aggressivi e femmine in calore\nCollaborare alla pulizia dell'area",
+    "accessibilita": "Accessibile. Terreno pianeggiante in ghiaia, cancelli ampi, parcheggio nelle vicinanze"
+  },
+  {
+    "titolo": "Area Cani Giardino dell'Orticoltura Firenze",
+    "slug": "area-cani-giardino-orticoltura-firenze",
+    "descrizione": "<p>Suggestiva area cani all'interno del Giardino dell'Orticoltura di Firenze. Spazio di circa 400 mq in un contesto storico e botanico di grande pregio.</p><p>Ambiente curato e particolare. Frequentata da appassionati che apprezzano il contesto verde-storico. Ideale per cani educati e socializzati.</p>",
+    "indirizzo": "Giardino dell'Orticoltura - Via Vittorio Emanuele II",
+    "localita": "Firenze",
+    "provincia": "FI",
+    "cap": "50129",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari giardino: 9:00-18:00 inverno, 9:00-20:00 estate",
+    "regolamento": "Raccolta obbligatoria deiezioni\nRispetto assoluto del giardino storico\nCani al guinzaglio fino all'area\nVietato danneggiare piante e strutture\nComportamento educato richiesto a cani e proprietari",
+    "accessibilita": "Accessibile con gradini. Non completamente accessibile a sedie a rotelle"
+  },
+  {
+    "titolo": "Area Cani Parco della Favorita Palermo",
+    "slug": "area-cani-parco-favorita-palermo",
+    "descrizione": "<p>Vasta area cani all'interno del Parco della Favorita, il polmone verde di Palermo ai piedi di Monte Pellegrino. Oltre 1000 mq di spazio recintato.</p><p>Una delle aree più grandi del sud Italia. Frequentata da proprietari di tutta la città. Percorso agility e zona giochi attrezzata.</p>",
+    "indirizzo": "Parco della Favorita - Viale Diana",
+    "localita": "Palermo",
+    "provincia": "PA",
+    "cap": "90146",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)",
+      "Per cani di taglia grande"
+    ],
+    "superficie": 1100,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nRispettare separazione aree piccola/grande taglia\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nProprietari responsabili dei danni causati\nMassimo 3 cani per persona",
+    "accessibilita": "Parzialmente accessibile. Terreno naturale con zone in pendenza. Cancelli ampi, parcheggio disponibile"
+  },
+  {
+    "titolo": "Area Cani Parco Ruffini Torino",
+    "slug": "area-cani-parco-ruffini-torino",
+    "descrizione": "<p>Area cani nel popolare Parco Ruffini di Torino, zona Crocetta. Spazio di circa 500 mq ben attrezzato e frequentato.</p><p>Molto popolare tra i residenti del quartiere. Buona manutenzione e pulizia. Punto di ritrovo per passeggiate serali.</p>",
+    "indirizzo": "Parco Ruffini - Corso Raffaello",
+    "localita": "Torino",
+    "provincia": "TO",
+    "cap": "10125",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nGuinzaglio fino all'ingresso area\nVietato accesso cani aggressivi o in calore\nSorvegliare i propri animali\nMassimo 2 cani per proprietario",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante in ghiaia, cancelli larghi, parcheggio vicino"
+  },
+  {
+    "titolo": "Area Cani Montagnola Bologna",
+    "slug": "area-cani-montagnola-bologna",
+    "descrizione": "<p>Area cani nel Parco della Montagnola nel centro di Bologna. Spazio di circa 350 mq in posizione centralissima vicino alla stazione.</p><p>Molto frequentata per la posizione strategica. Dimensioni contenute ma ben attrezzata. Ideale per soste brevi durante passeggiate in centro.</p>",
+    "indirizzo": "Parco della Montagnola - Via Irnerio",
+    "localita": "Bologna",
+    "provincia": "BO",
+    "cap": "40126",
+    "tipo_area": [
+      "Recintata",
+      "Per cani di piccola taglia"
+    ],
+    "superficie": 350,
+    "servizi_disponibili": [
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nArea preferibilmente per cani piccola taglia\nCani al guinzaglio fino all'area\nRispettare gli altri fruitori\nVietato introdurre oggetti pericolosi",
+    "accessibilita": "Accessibile. Terreno in ghiaia, panchine disponibili, ben collegata con mezzi pubblici"
+  },
+  {
+    "titolo": "Area Cani Parco Virgiliano Napoli",
+    "slug": "area-cani-parco-virgiliano-napoli",
+    "descrizione": "<p>Spettacolare area cani nel Parco Virgiliano a Posillipo, con vista mozzafiato sul Golfo di Napoli. Circa 600 mq di spazio recintato panoramico.</p><p>Una delle aree cani con la vista più bella d'Italia. Molto apprezzata per la location suggestiva. Frequentata da residenti della zona collinare di Napoli.</p>",
+    "indirizzo": "Parco Virgiliano - Via Tito Lucrezio Caro",
+    "localita": "Napoli",
+    "provincia": "NA",
+    "cap": "80123",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 600,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-20:00 inverno, 7:00-tramonto estate",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area recintata\nVietato accesso cani aggressivi\nRispettare il decoro del parco\nProprietari responsabili dei propri cani",
+    "accessibilita": "Parzialmente accessibile. Terreno in pendenza con zone pianeggianti. Vista panoramica"
+  },
+  {
+    "titolo": "Area Cani Parco Ducale Parma",
+    "slug": "area-cani-parco-ducale-parma",
+    "descrizione": "<p>Area cani nello storico Parco Ducale di Parma. Spazio di circa 450 mq immerso nel verde storico del parco, vicino al Palazzo Ducale.</p><p>Contesto elegante e ben curato. Frequentata da residenti del centro storico. Ambiente tranquillo ideale per cani e proprietari.</p>",
+    "indirizzo": "Parco Ducale - Viale Piacenza",
+    "localita": "Parma",
+    "provincia": "PR",
+    "cap": "43121",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 450,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-21:00",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio fino all'area\nVietato danneggiare il parco storico\nComportamento educato richiesto\nRispettare pulizia e decoro",
+    "accessibilita": "Accessibile. Terreno in ghiaia fine pianeggiante. Cancello standard"
+  },
+  {
+    "titolo": "Area Cani Parco della Pellerina Torino",
+    "slug": "area-cani-parco-pellerina-torino",
+    "descrizione": "<p>Grande area cani nel vasto Parco della Pellerina, il parco più grande di Torino. Oltre 1300 mq di spazio recintato con più zone.</p><p>Area molto ampia e ben strutturata con zone dedicate a diverse attività. Percorso agility completo e area puppy. Gestione curata da associazioni cinofile.</p>",
+    "indirizzo": "Parco della Pellerina - Corso Regina Margherita",
+    "localita": "Torino",
+    "provincia": "TO",
+    "cap": "10149",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)",
+      "Per cani di taglia grande"
+    ],
+    "superficie": 1300,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nRispettare le diverse zone dell'area\nCani al guinzaglio fino all'ingresso\nVietato accesso cani aggressivi o femmine in calore\nUtilizzare percorso agility con responsabilità\nMassimo 3 cani per persona",
+    "accessibilita": "Completamente accessibile. Terreno misto erba/ghiaia livellato. Ingressi multipli ampi"
+  },
+  {
+    "titolo": "Area Cani Parco di Monte Claro Cagliari",
+    "slug": "area-cani-parco-monte-claro-cagliari",
+    "descrizione": "<p>Area cani nel Parco di Monte Claro, il principale parco urbano di Cagliari. Spazio di circa 550 mq con vista sulla città.</p><p>Ben attrezzata e molto frequentata da proprietari di tutta la città. Posizione collinare con panorama. Buona ombreggiatura naturale.</p>",
+    "indirizzo": "Parco di Monte Claro - Viale Fra Ignazio",
+    "localita": "Cagliari",
+    "provincia": "CA",
+    "cap": "09123",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 550,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-21:00 tutto l'anno",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nProprietari responsabili del comportamento dei cani\nRispettare le attrezzature presenti",
+    "accessibilita": "Parzialmente accessibile. Terreno in leggera pendenza. Cancello standard, panchine disponibili"
+  },
+  {
+    "titolo": "Area Cani Villa Comunale Napoli",
+    "slug": "area-cani-villa-comunale-napoli",
+    "descrizione": "<p>Area cani nella storica Villa Comunale di Napoli, il giardino pubblico sul lungomare. Spazio di circa 400 mq vicino al mare.</p><p>Posizione centrale e molto frequentata. Comoda per chi passeggia sul lungomare con il cane. Ristrutturata di recente.</p>",
+    "indirizzo": "Villa Comunale - Via Caracciolo",
+    "localita": "Napoli",
+    "provincia": "NA",
+    "cap": "80122",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna"
+    ],
+    "orari_accesso": "Segue orari villa: 7:00-24:00",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio obbligatorio fino all'area\nVietati cani aggressivi e femmine in calore\nMassimo 2 cani per proprietario\nRispettare pulizia dell'area",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante, facile accesso dal lungomare"
+  },
+  {
+    "titolo": "Area Cani Parco Europa Brescia",
+    "slug": "area-cani-parco-europa-brescia",
+    "descrizione": "<p>Moderna area cani nel Parco Europa di Brescia. Spazio di circa 600 mq ben attrezzato inaugurato nel 2019.</p><p>Design moderno con pavimentazione drenante. Molto frequentata da residenti del quartiere. Ben illuminata per uso serale.</p>",
+    "indirizzo": "Parco Europa - Via Triumplina",
+    "localita": "Brescia",
+    "provincia": "BS",
+    "cap": "25123",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 600,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nRispettare attrezzature e arredi\nVideosorveglianza attiva",
+    "accessibilita": "Completamente accessibile. Pavimentazione drenante antisdrucciolo. Rampe di accesso"
+  },
+  {
+    "titolo": "Area Cani Parco del Cormor Udine",
+    "slug": "area-cani-parco-cormor-udine",
+    "descrizione": "<p>Area cani lungo il Parco del Cormor a Udine. Spazio di circa 500 mq in zona verde lungo il fiume.</p><p>Ambiente naturale e rilassante. Frequentata da proprietari che cercano tranquillità. Ben ombreggiata da vegetazione ripariale.</p>",
+    "indirizzo": "Parco del Cormor - Via Pradamano",
+    "localita": "Udine",
+    "provincia": "UD",
+    "cap": "33100",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio fino all'area recintata\nVietato accesso cani aggressivi\nRispettare l'ambiente naturale\nNon disturbare la fauna",
+    "accessibilita": "Accessibile. Terreno naturale ben livellato. Parcheggio nelle vicinanze"
+  },
+  {
+    "titolo": "Area Cani Giardini di Porta Venezia Milano",
+    "slug": "area-cani-giardini-porta-venezia-milano",
+    "descrizione": "<p>Area cani storica nei Giardini Pubblici Indro Montanelli (ex Giardini di Porta Venezia). Spazio di circa 400 mq in pieno centro.</p><p>Una delle prime aree cani di Milano. Molto frequentata per la posizione centrale. Ambiente cittadino ma ben curato.</p>",
+    "indirizzo": "Giardini Indro Montanelli - Corso Venezia",
+    "localita": "Milano",
+    "provincia": "MI",
+    "cap": "20121",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari giardini: 6:30-21:00 inverno, 6:30-23:00 estate",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi o in calore\nMassimo 2 cani per proprietario\nRispettare gli altri fruitori",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante, ben collegata con mezzi pubblici"
+  },
+  {
+    "titolo": "Area Cani Parco Bassini Cinisello Balsamo",
+    "slug": "area-cani-parco-bassini-cinisello-balsamo",
+    "descrizione": "<p>Grande area cani nel Parco Bassini a Cinisello Balsamo, hinterland milanese. Oltre 800 mq di spazio ben attrezzato.</p><p>Una delle aree più grandi dell'hinterland nord di Milano. Ottima manutenzione e pulizia. Frequentata da residenti di diversi comuni limitrofi.</p>",
+    "indirizzo": "Parco Bassini - Via Manin",
+    "localita": "Cinisello Balsamo",
+    "provincia": "MI",
+    "cap": "20092",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 850,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Percorso agility",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nRispettare separazione aree piccola/grande taglia\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nCollaborare alla pulizia dell'area\nMassimo 3 cani per persona",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante in ghiaia. Parcheggio ampio a 50m"
+  },
+  {
+    "titolo": "Area Cani Colle Oppio Roma",
+    "slug": "area-cani-colle-oppio-roma",
+    "descrizione": "<p>Area cani nel Parco del Colle Oppio a Roma, tra il Colosseo e Santa Maria Maggiore. Spazio di circa 450 mq in contesto archeologico.</p><p>Posizione suggestiva con vista su resti archeologici. Frequentata da residenti del Rione Monti e turisti. Ambiente unico nel suo genere.</p>",
+    "indirizzo": "Parco del Colle Oppio - Via Labicana",
+    "localita": "Roma",
+    "provincia": "RM",
+    "cap": "00184",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 450,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nGuinzaglio obbligatorio fino all'area\nRispetto assoluto del contesto archeologico\nVietato danneggiare reperti e vegetazione\nProprietari responsabili dei propri cani",
+    "accessibilita": "Parzialmente accessibile. Terreno con lievi pendenze. Contesto storico vincolato"
+  },
+  {
+    "titolo": "Area Cani Parco della Rocca Verona",
+    "slug": "area-cani-parco-rocca-verona",
+    "descrizione": "<p>Area cani nel suggestivo Parco delle Mura della Rocca a Verona. Spazio di circa 500 mq con vista panoramica sulla città.</p><p>Posizione collinare con panorama. Apprezzata per la vista e la tranquillità. Frequentata da residenti della zona Veronetta.</p>",
+    "indirizzo": "Parco delle Mura - Salita Castel San Pietro",
+    "localita": "Verona",
+    "provincia": "VR",
+    "cap": "37129",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nRispettare il contesto storico delle mura\nMassimo 2 cani per proprietario",
+    "accessibilita": "Parzialmente accessibile. Accesso in salita. Vista panoramica"
+  },
+  {
+    "titolo": "Area Cani Parco Novi Sad Modena",
+    "slug": "area-cani-parco-novi-sad-modena",
+    "descrizione": "<p>Grande area cani nel Parco Novi Sad di Modena. Spazio di circa 700 mq ben attrezzato e mantenuto.</p><p>Area moderna inaugurata nel 2018 con attrezzature nuove. Molto frequentata da modenesi. Ottima gestione e manutenzione.</p>",
+    "indirizzo": "Parco Novi Sad - Viale Monte Kosica",
+    "localita": "Modena",
+    "provincia": "MO",
+    "cap": "41124",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 700,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nRispettare separazione piccola/grande taglia\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi o femmine in calore\nUtilizzare attrezzature con cura\nMassimo 2 cani per persona",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante ben livellato. Ampio parcheggio"
+  },
+  {
+    "titolo": "Area Cani Parco Talete Roma",
+    "slug": "area-cani-parco-talete-roma-eur",
+    "descrizione": "<p>Area cani nel Parco Talete all'EUR, Roma. Spazio di circa 550 mq in zona moderna e residenziale.</p><p>Frequentata da residenti dell'EUR. Ben tenuta e pulita. Ambiente tranquillo ideale per cani e proprietari.</p>",
+    "indirizzo": "Parco Talete - Viale dell'Oceano Pacifico",
+    "localita": "Roma",
+    "provincia": "RM",
+    "cap": "00144",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 550,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio obbligatorio fino all'area\nVietato accesso cani aggressivi\nProprietari responsabili dei propri cani\nRispettare pulizia e decoro",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante, rampe di accesso, parcheggio dedicato"
+  },
+  {
+    "titolo": "Area Cani Parco delle Cave Milano",
+    "slug": "area-cani-parco-cave-milano",
+    "descrizione": "<p>Vasta area cani nel Parco delle Cave, zona ovest di Milano. Oltre 1000 mq di spazio immerso nella natura del parco.</p><p>Una delle aree più grandi e naturali di Milano. Ambiente semi-selvaggio con laghi nelle vicinanze. Molto apprezzata da chi cerca tranquillità.</p>",
+    "indirizzo": "Parco delle Cave - Via Fratelli Zoia",
+    "localita": "Milano",
+    "provincia": "MI",
+    "cap": "20153",
+    "tipo_area": [
+      "Recintata",
+      "Area mista",
+      "Per cani di taglia grande"
+    ],
+    "superficie": 1050,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area recintata\nVietato accesso cani aggressivi\nRispettare l'ambiente naturale del parco\nNon disturbare fauna selvatica\nMassimo 3 cani per proprietario",
+    "accessibilita": "Parzialmente accessibile. Terreno naturale con zone irregolari. Ampio parcheggio disponibile"
+  },
+  {
+    "titolo": "Area Cani Giardini Piazza Garibaldi Trieste",
+    "slug": "area-cani-giardini-garibaldi-trieste",
+    "descrizione": "<p>Area cani nei Giardini di Piazza Garibaldi a Trieste. Spazio di circa 300 mq in posizione centrale vicino al mare.</p><p>Piccola ma ben frequentata per la posizione strategica. Comoda per residenti del centro e per chi passeggia sul lungomare.</p>",
+    "indirizzo": "Giardini Pubblici - Piazza Garibaldi",
+    "localita": "Trieste",
+    "provincia": "TS",
+    "cap": "34132",
+    "tipo_area": [
+      "Recintata",
+      "Per cani di piccola taglia"
+    ],
+    "superficie": 300,
+    "servizi_disponibili": [
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nArea preferibilmente per cani piccola taglia\nCani al guinzaglio fino all'area\nMassimo 2 cani per persona\nRispettare gli altri fruitori",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante, ben collegata, vicina al mare"
+  },
+  {
+    "titolo": "Area Cani Parco di San Giuliano Venezia Mestre",
+    "slug": "area-cani-parco-san-giuliano-venezia",
+    "descrizione": "<p>Grande area cani nel Parco di San Giuliano a Venezia Mestre, affacciato sulla laguna. Oltre 900 mq con vista eccezionale.</p><p>Posizione unica con vista su Venezia e la laguna. Una delle aree cani più suggestive del Veneto. Molto frequentata nei weekend.</p>",
+    "indirizzo": "Parco San Giuliano - Via Forte Marghera",
+    "localita": "Venezia",
+    "provincia": "VE",
+    "cap": "30175",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 950,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nRispettare ambiente lagunare\nProprietari responsabili dei propri cani\nMassimo 3 cani per persona",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante, percorsi ciclabili, ampio parcheggio"
+  },
+  {
+    "titolo": "Area Cani Parco Nord Padova",
+    "slug": "area-cani-parco-nord-padova",
+    "descrizione": "<p>Area cani nel Parco Nord di Padova, zona Arcella. Spazio di circa 600 mq ben attrezzato e frequentato.</p><p>Inaugurata nel 2021, moderna e funzionale. Molto frequentata da residenti del quartiere. Ottima manutenzione e pulizia.</p>",
+    "indirizzo": "Parco Nord - Via della Croce Rossa",
+    "localita": "Padova",
+    "provincia": "PD",
+    "cap": "35129",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 600,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi o in calore\nUtilizzare giochi con responsabilità\nMassimo 2 cani per proprietario",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante in ghiaia drenante. Parcheggio vicino"
+  },
+  {
+    "titolo": "Area Cani Parco Amendola Bari",
+    "slug": "area-cani-parco-amendola-bari",
+    "descrizione": "<p>Area cani nel Parco Amendola a Bari. Spazio di circa 450 mq in zona residenziale.</p><p>Frequentata da residenti del quartiere Carrassi-San Pasquale. Ben tenuta e pulita. Punto di ritrovo serale per proprietari di cani.</p>",
+    "indirizzo": "Parco Amendola - Via Amendola",
+    "localita": "Bari",
+    "provincia": "BA",
+    "cap": "70126",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 450,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio fino all'area recintata\nVietato accesso cani aggressivi\nProprietari responsabili dei danni\nRispettare pulizia dell'area",
+    "accessibilita": "Accessibile. Terreno pianeggiante, facile accesso, parcheggio disponibile"
+  },
+  {
+    "titolo": "Area Cani Parco Della Resistenza Lecce",
+    "slug": "area-cani-parco-resistenza-lecce",
+    "descrizione": "<p>Area cani nel Parco della Resistenza a Lecce. Spazio di circa 400 mq recintato e ombreggiato.</p><p>Frequentata da leccesi amanti dei cani. Ben ombreggiata, fondamentale nei mesi estivi pugliesi. Ambiente accogliente e curato.</p>",
+    "indirizzo": "Parco della Resistenza - Viale Otranto",
+    "localita": "Lecce",
+    "provincia": "LE",
+    "cap": "73100",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-22:00",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi\nRispettare decoro del parco\nMassimo 2 cani per proprietario",
+    "accessibilita": "Accessibile. Terreno pianeggiante in ghiaia. Parcheggio nelle vicinanze"
+  },
+  {
+    "titolo": "Area Cani Parco Teodorico Ravenna",
+    "slug": "area-cani-parco-teodorico-ravenna",
+    "descrizione": "<p>Area cani nei pressi del Parco Teodorico a Ravenna, vicino al Mausoleo. Spazio di circa 350 mq in contesto storico.</p><p>Posizione suggestiva vicino a monumenti UNESCO. Frequentata da residenti e turisti con cani. Piccola ma ben curata.</p>",
+    "indirizzo": "Parco Teodorico - Via delle Industrie",
+    "localita": "Ravenna",
+    "provincia": "RA",
+    "cap": "48122",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 350,
+    "servizi_disponibili": [
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta deiezioni obbligatoria\nGuinzaglio fino all'area\nRispetto assoluto del contesto storico\nVietato danneggiare vegetazione\nProprietari responsabili dei propri cani",
+    "accessibilita": "Accessibile. Terreno in ghiaia pianeggiante. Parcheggio turistico nelle vicinanze"
+  },
+  {
+    "titolo": "Area Cani Parco Archeologico Cagliari",
+    "slug": "area-cani-parco-archeologico-cagliari",
+    "descrizione": "<p>Area cani nei pressi del Parco Archeologico di Tuvixeddu a Cagliari. Spazio di circa 500 mq in contesto naturalistico-archeologico.</p><p>Posizione particolare in area archeologica. Vista panoramica sulla città e sul mare. Ambiente tranquillo e suggestivo.</p>",
+    "indirizzo": "Parco di Tuvixeddu - Via Sant'Avendrace",
+    "localita": "Cagliari",
+    "provincia": "CA",
+    "cap": "09122",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 500,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi"
+    ],
+    "orari_accesso": "Aperta dalle 7:00 alle 20:00",
+    "regolamento": "Raccolta obbligatoria deiezioni\nRispetto assoluto area archeologica\nCani al guinzaglio fino all'area recintata\nVietato danneggiare reperti e vegetazione\nProprietari responsabili comportamento cani",
+    "accessibilita": "Parzialmente accessibile. Terreno in pendenza con zona pianeggiante. Vista panoramica"
+  },
+  {
+    "titolo": "Area Cani Parco Ducale Sassuolo",
+    "slug": "area-cani-parco-ducale-sassuolo",
+    "descrizione": "<p>Area cani nel Parco Ducale di Sassuolo (MO), vicino alla storica Reggia Estense. Spazio di circa 400 mq in contesto storico-artistico.</p><p>Ambiente elegante e curato. Frequentata da residenti di Sassuolo e dintorni. Posizione suggestiva nel verde del parco storico.</p>",
+    "indirizzo": "Parco Ducale - Piazza Libertà",
+    "localita": "Sassuolo",
+    "provincia": "MO",
+    "cap": "41049",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 400,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Segue orari parco: 7:00-20:00",
+    "regolamento": "Raccolta deiezioni obbligatoria\nRispetto del parco storico\nGuinzaglio obbligatorio fino all'area\nComportamento educato richiesto\nVietato danneggiare piante e arredi storici",
+    "accessibilita": "Accessibile. Terreno pianeggiante in ghiaia. Parcheggio a 100m dalla Reggia"
+  },
+  {
+    "titolo": "Area Cani Parco del Gelso Sesto San Giovanni",
+    "slug": "area-cani-parco-gelso-sesto-san-giovanni",
+    "descrizione": "<p>Area cani nel Parco del Gelso a Sesto San Giovanni (MI). Spazio di circa 550 mq ben attrezzato nell'hinterland milanese.</p><p>Frequentata da residenti di Sesto e comuni limitrofi. Ben mantenuta con collaborazione di volontari locali. Ambiente accogliente.</p>",
+    "indirizzo": "Parco del Gelso - Via Fratelli Cervi",
+    "localita": "Sesto San Giovanni",
+    "provincia": "MI",
+    "cap": "20099",
+    "tipo_area": [
+      "Recintata",
+      "Area mista"
+    ],
+    "superficie": 550,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Illuminazione notturna",
+      "Giochi per cani",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nCani al guinzaglio fino all'area\nVietato accesso cani aggressivi o in calore\nCollaborare alla pulizia dell'area\nMassimo 2 cani per persona",
+    "accessibilita": "Completamente accessibile. Terreno pianeggiante livellato. Parcheggio ampio a 30m"
+  },
+  {
+    "titolo": "Area Cani Villa Pamphili Roma",
+    "slug": "area-cani-villa-pamphili-roma",
+    "descrizione": "<p>Grande area cani in Villa Pamphili, il parco più grande di Roma. Oltre 1100 mq immersi nel verde della villa storica.</p><p>Una delle aree cani più ampie e belle di Roma. Frequentatissima nei weekend. Ambiente naturale con alberi secolari. Molto apprezzata dai proprietari di cani romani.</p>",
+    "indirizzo": "Villa Pamphili - Via Aurelia Antica",
+    "localita": "Roma",
+    "provincia": "RM",
+    "cap": "00165",
+    "tipo_area": [
+      "Recintata",
+      "Doppia area (piccola/grande)"
+    ],
+    "superficie": 1150,
+    "servizi_disponibili": [
+      "Fontanella acqua",
+      "Sacchetti igienici",
+      "Cestini",
+      "Panchine",
+      "Giochi per cani",
+      "Ombreggiatura/alberi",
+      "Parcheggio vicino"
+    ],
+    "orari_accesso": "Libero accesso 24h",
+    "regolamento": "Raccolta obbligatoria deiezioni\nRispettare divisione piccola/grande taglia\nCani al guinzaglio fino all'area recintata\nVietato accesso cani aggressivi\nProprietari responsabili comportamento cani\nRispettare il contesto storico della villa\nMassimo 3 cani per proprietario",
+    "accessibilita": "Parzialmente accessibile. Terreno naturale con zone pianeggianti. Parcheggi multipli disponibili"
+  }
+]
