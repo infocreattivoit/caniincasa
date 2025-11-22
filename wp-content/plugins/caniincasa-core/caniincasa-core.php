@@ -110,6 +110,9 @@ class Caniincasa_Core {
         // Razze JSON Importer
         require_once CANIINCASA_CORE_PATH . 'includes/razze-json-importer.php';
 
+        // Toelettature JSON Importer
+        require_once CANIINCASA_CORE_PATH . 'includes/toelettature-json-importer.php';
+
         // Ad System (Banner Pubblicitari)
         require_once CANIINCASA_CORE_PATH . 'includes/ad-system.php';
 
