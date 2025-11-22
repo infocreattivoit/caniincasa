@@ -31,6 +31,8 @@ get_header();
             <!-- Sidebar Filtri -->
             <aside class="strutture-filters-sidebar">
 
+                <?php do_action( 'caniincasa_archive_strutture_sidebar' ); ?>
+
                 <div class="filters-box">
                     <div class="filters-header">
                         <h3>🔍 Filtra Veterinari</h3>
@@ -124,6 +126,8 @@ get_header();
 
             <!-- Grid Veterinari -->
             <div class="strutture-main-content">
+
+                <?php do_action( 'caniincasa_archive_strutture_top' ); ?>
 
                 <!-- Results Counter -->
                 <div class="results-header">

@@ -134,6 +134,8 @@ while ( have_posts() ) :
                 <!-- Sidebar -->
                 <aside class="struttura-sidebar">
 
+                    <?php do_action( 'caniincasa_single_struttura_sidebar_top' ); ?>
+
                     <!-- Owner Box -->
                     <?php caniincasa_struttura_claim_buttons( get_the_ID(), 'centri_cinofili' ); ?>
 
@@ -171,6 +173,8 @@ while ( have_posts() ) :
                         <h3 class="box-title">Condividi</h3>
                         <?php caniincasa_social_share_buttons(); ?>
                     </div>
+
+                    <?php do_action( 'caniincasa_single_struttura_sidebar_bottom' ); ?>
 
                 </aside>
 

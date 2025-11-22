@@ -189,6 +189,8 @@ while ( have_posts() ) :
                 <!-- Sidebar -->
                 <aside class="struttura-sidebar">
 
+                    <?php do_action( 'caniincasa_single_struttura_sidebar_top' ); ?>
+
                     <!-- Urgenze Box (if H24 service available) -->
                     <?php if ( $pronto_soccorso && strtolower( $pronto_soccorso ) !== 'no' ) : ?>
                         <div class="sidebar-box urgenze-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
@@ -239,6 +241,8 @@ while ( have_posts() ) :
                         <h3 class="box-title">Condividi</h3>
                         <?php caniincasa_social_share_buttons(); ?>
                     </div>
+
+                    <?php do_action( 'caniincasa_single_struttura_sidebar_bottom' ); ?>
 
                 </aside>
 
