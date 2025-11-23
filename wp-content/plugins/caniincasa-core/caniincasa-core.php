@@ -98,6 +98,9 @@ class Caniincasa_Core {
         // Shortcode Generator
         require_once CANIINCASA_CORE_PATH . 'includes/shortcode-generator.php';
 
+        // CTA Box Generator
+        require_once CANIINCASA_CORE_PATH . 'includes/class-cta-box.php';
+
         // AI Content Generator
         require_once CANIINCASA_CORE_PATH . 'includes/ai-content-generator.php';
 
@@ -148,6 +151,11 @@ class Caniincasa_Core {
     private function init_hooks() {
         // Load ACF Fields after ACF has fully initialized (priority 20 after default init priority 10)
         add_action( 'acf/init', array( $this, 'load_acf_fields' ) );
+
+        // Initialize CTA Box system
+        if ( class_exists( 'Caniincasa_CTA_Box' ) ) {
+            Caniincasa_CTA_Box::init();
+        }
 
         // Activation/Deactivation hooks
         register_activation_hook( CANIINCASA_CORE_FILE, array( $this, 'activate' ) );
