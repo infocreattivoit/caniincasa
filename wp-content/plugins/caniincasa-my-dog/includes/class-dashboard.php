@@ -19,14 +19,17 @@ class Caniincasa_My_Dog_Dashboard {
 		add_shortcode( 'my_dogs_dashboard', array( __CLASS__, 'dashboard_shortcode' ) );
 		add_shortcode( 'my_dog_single', array( __CLASS__, 'single_dog_shortcode' ) );
 
-		// Rewrite rules for dashboard
-		add_action( 'init', array( __CLASS__, 'add_rewrite_rules' ) );
+		// Query vars and template redirect
+		// NOTE: Rewrite rules are added only on plugin activation to prevent conflicts
 		add_filter( 'query_vars', array( __CLASS__, 'add_query_vars' ) );
 		add_action( 'template_redirect', array( __CLASS__, 'dashboard_template_redirect' ) );
 	}
 
 	/**
 	 * Add rewrite rules
+	 *
+	 * NOTE: This method is called ONLY during plugin activation.
+	 * Do NOT call this on 'init' hook to prevent conflicts with WordPress login system.
 	 */
 	public static function add_rewrite_rules() {
 		add_rewrite_rule( '^i-miei-cani/?$', 'index.php?my_dogs_dashboard=1', 'top' );
