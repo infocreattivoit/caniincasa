@@ -424,9 +424,12 @@
     }
 
     // Execute immediately if DOM is already ready, otherwise wait
+    alert('About to check readyState: ' + document.readyState);
     if (document.readyState === 'loading') {
+        alert('DOM loading, waiting for DOMContentLoaded');
         document.addEventListener('DOMContentLoaded', initNavigation);
     } else {
+        alert('DOM ready, calling initNavigation immediately');
         // DOM is already ready, execute immediately
         initNavigation();
     }
