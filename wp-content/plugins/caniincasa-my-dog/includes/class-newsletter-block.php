@@ -15,8 +15,8 @@ class Caniincasa_My_Dog_Newsletter_Block {
 	 * Initialize
 	 */
 	public static function init() {
-		// Add newsletter block to footer
-		add_action( 'wp_footer', array( __CLASS__, 'render_newsletter_block' ), 5 );
+		// Add newsletter block before footer
+		add_action( 'caniincasa_before_footer', array( __CLASS__, 'render_newsletter_block' ) );
 
 		// Shortcode
 		add_shortcode( 'newsletter_signup', array( __CLASS__, 'shortcode' ) );
@@ -90,10 +90,10 @@ class Caniincasa_My_Dog_Newsletter_Block {
 
 		<style>
 			.caniincasa-newsletter-block {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #306587 0%, #ff850c 100%);
 				color: white;
 				padding: 50px 20px;
-				margin-top: 60px;
+				margin: 0;
 			}
 			.newsletter-container {
 				max-width: 1200px;
@@ -134,7 +134,7 @@ class Caniincasa_My_Dog_Newsletter_Block {
 			}
 			.newsletter-submit {
 				padding: 15px 35px;
-				background: #FF6B35;
+				background: #ff850c;
 				color: white;
 				border: none;
 				border-radius: 50px;
@@ -145,7 +145,7 @@ class Caniincasa_My_Dog_Newsletter_Block {
 				white-space: nowrap;
 			}
 			.newsletter-submit:hover {
-				background: #ff5419;
+				background: #e67609;
 				transform: translateY(-2px);
 				box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 			}

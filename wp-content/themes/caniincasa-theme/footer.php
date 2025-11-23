@@ -9,6 +9,14 @@
 
     <?php if ( ! is_page_template( 'template-dashboard.php' ) ) : ?>
 
+    <?php
+    /**
+     * Hook before footer
+     * Used for newsletter blocks, CTA sections, etc.
+     */
+    do_action( 'caniincasa_before_footer' );
+    ?>
+
     <!-- Footer -->
     <footer id="colophon" class="site-footer">
 

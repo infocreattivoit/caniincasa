@@ -98,8 +98,11 @@ class Caniincasa_My_Dog {
 		// Create tables if needed
 		$this->create_tables();
 
-		// Flush rewrite rules
+		// Register post types and rewrite rules
 		Caniincasa_My_Dog_Post_Type::register();
+		Caniincasa_My_Dog_Dashboard::add_rewrite_rules();
+
+		// Flush rewrite rules
 		flush_rewrite_rules();
 
 		// Set default options
