@@ -7,15 +7,18 @@
  */
 ?>
 
-    <?php if ( ! is_page_template( 'template-dashboard.php' ) ) : ?>
-
     <?php
     /**
      * Hook before footer
      * Used for newsletter blocks, CTA sections, etc.
+     * Appears on all pages except dashboard
      */
-    do_action( 'caniincasa_before_footer' );
+    if ( ! is_page_template( 'template-dashboard.php' ) ) {
+        do_action( 'caniincasa_before_footer' );
+    }
     ?>
+
+    <?php if ( ! is_page_template( 'template-dashboard.php' ) ) : ?>
 
     <!-- Footer -->
     <footer id="colophon" class="site-footer">
