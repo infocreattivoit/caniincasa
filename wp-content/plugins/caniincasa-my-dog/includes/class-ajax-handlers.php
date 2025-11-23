@@ -49,7 +49,7 @@ class Caniincasa_My_Dog_AJAX {
 		}
 
 		$dog_id   = isset( $_POST['dog_id'] ) ? intval( $_POST['dog_id'] ) : 0;
-		$dog_name = isset( $_POST['dog_name'] ) ? sanitize_text_field( $_POST['dog_name'] ) : '';
+		$dog_name = isset( $_POST['dog_nome'] ) ? sanitize_text_field( $_POST['dog_nome'] ) : '';
 
 		if ( empty( $dog_name ) ) {
 			wp_send_json_error( array( 'message' => __( 'Il nome è obbligatorio.', 'caniincasa-my-dog' ) ) );
@@ -82,16 +82,39 @@ class Caniincasa_My_Dog_AJAX {
 			wp_send_json_error( array( 'message' => __( 'Errore nel salvataggio.', 'caniincasa-my-dog' ) ) );
 		}
 
+		// Save ACF fields
+		if ( isset( $_POST['dog_razza'] ) ) {
+			update_field( 'razza', sanitize_text_field( $_POST['dog_razza'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_sesso'] ) ) {
+			update_field( 'sesso', sanitize_text_field( $_POST['dog_sesso'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_data_nascita'] ) ) {
+			update_field( 'data_nascita', sanitize_text_field( $_POST['dog_data_nascita'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_peso_attuale'] ) ) {
+			update_field( 'peso_attuale', floatval( $_POST['dog_peso_attuale'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_microchip'] ) ) {
+			update_field( 'microchip', sanitize_text_field( $_POST['dog_microchip'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_note'] ) ) {
+			update_field( 'note', sanitize_textarea_field( $_POST['dog_note'] ), $dog_id );
+		}
+
+		// Also save nome field
+		update_field( 'nome', $dog_name, $dog_id );
+
 		// Handle photo upload
-		if ( ! empty( $_FILES['dog_photo']['name'] ) ) {
+		if ( ! empty( $_FILES['dog_foto']['name'] ) ) {
 			require_once ABSPATH . 'wp-admin/includes/image.php';
 			require_once ABSPATH . 'wp-admin/includes/file.php';
 			require_once ABSPATH . 'wp-admin/includes/media.php';
 
-			$attachment_id = media_handle_upload( 'dog_photo', $dog_id );
+			$attachment_id = media_handle_upload( 'dog_foto', $dog_id );
 
 			if ( ! is_wp_error( $attachment_id ) ) {
-				set_post_thumbnail( $dog_id, $attachment_id );
+				update_field( 'foto', $attachment_id, $dog_id );
 			}
 		}
 
