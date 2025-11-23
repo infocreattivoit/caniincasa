@@ -48,7 +48,7 @@ get_header();
 
 				case 'edit':
 					// Edit dog form
-					if ( $dog_id && Caniincasa_My_Dog_Post_Type::user_can_edit( $dog_id ) ) {
+					if ( $dog_id && Caniincasa_My_Dog_Post_Type::user_can_view( $dog_id ) ) {
 						$dog_post = get_post( $dog_id );
 						if ( $dog_post ) {
 							include CANIINCASA_MY_DOG_PATH . 'templates/dog-form.php';

@@ -82,28 +82,109 @@ class Caniincasa_My_Dog_AJAX {
 			wp_send_json_error( array( 'message' => __( 'Errore nel salvataggio.', 'caniincasa-my-dog' ) ) );
 		}
 
-		// Save ACF fields
-		if ( isset( $_POST['dog_razza'] ) ) {
-			update_field( 'razza', sanitize_text_field( $_POST['dog_razza'] ), $dog_id );
+		// Save ACF fields - ALL OF THEM
+		update_field( 'nome', $dog_name, $dog_id );
+
+		// Basic info
+		if ( isset( $_POST['dog_razza_custom'] ) ) {
+			update_field( 'dog_razza_custom', sanitize_text_field( $_POST['dog_razza_custom'] ), $dog_id );
 		}
-		if ( isset( $_POST['dog_sesso'] ) ) {
-			update_field( 'sesso', sanitize_text_field( $_POST['dog_sesso'] ), $dog_id );
+		if ( isset( $_POST['dog_gender'] ) ) {
+			update_field( 'dog_gender', sanitize_text_field( $_POST['dog_gender'] ), $dog_id );
 		}
-		if ( isset( $_POST['dog_data_nascita'] ) ) {
-			update_field( 'data_nascita', sanitize_text_field( $_POST['dog_data_nascita'] ), $dog_id );
+		if ( isset( $_POST['dog_birth_date'] ) ) {
+			update_field( 'dog_birth_date', sanitize_text_field( $_POST['dog_birth_date'] ), $dog_id );
 		}
-		if ( isset( $_POST['dog_peso_attuale'] ) ) {
-			update_field( 'peso_attuale', floatval( $_POST['dog_peso_attuale'] ), $dog_id );
+		if ( isset( $_POST['dog_size'] ) ) {
+			update_field( 'dog_size', sanitize_text_field( $_POST['dog_size'] ), $dog_id );
 		}
+		if ( isset( $_POST['dog_weight'] ) ) {
+			update_field( 'dog_weight', floatval( $_POST['dog_weight'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_color'] ) ) {
+			update_field( 'dog_color', sanitize_text_field( $_POST['dog_color'] ), $dog_id );
+		}
+		update_field( 'dog_neutered', isset( $_POST['dog_neutered'] ) ? 1 : 0, $dog_id );
+
+		// Identification
 		if ( isset( $_POST['dog_microchip'] ) ) {
-			update_field( 'microchip', sanitize_text_field( $_POST['dog_microchip'] ), $dog_id );
+			update_field( 'dog_microchip', sanitize_text_field( $_POST['dog_microchip'] ), $dog_id );
 		}
-		if ( isset( $_POST['dog_note'] ) ) {
-			update_field( 'note', sanitize_textarea_field( $_POST['dog_note'] ), $dog_id );
+		if ( isset( $_POST['dog_microchip_date'] ) ) {
+			update_field( 'dog_microchip_date', sanitize_text_field( $_POST['dog_microchip_date'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_pedigree'] ) ) {
+			update_field( 'dog_pedigree', sanitize_text_field( $_POST['dog_pedigree'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_passport'] ) ) {
+			update_field( 'dog_passport', sanitize_text_field( $_POST['dog_passport'] ), $dog_id );
 		}
 
-		// Also save nome field
-		update_field( 'nome', $dog_name, $dog_id );
+		// Health
+		if ( isset( $_POST['dog_veterinarian'] ) ) {
+			update_field( 'dog_veterinarian', sanitize_text_field( $_POST['dog_veterinarian'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_veterinarian_phone'] ) ) {
+			update_field( 'dog_veterinarian_phone', sanitize_text_field( $_POST['dog_veterinarian_phone'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_veterinarian_address'] ) ) {
+			update_field( 'dog_veterinarian_address', sanitize_textarea_field( $_POST['dog_veterinarian_address'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_allergies'] ) ) {
+			update_field( 'dog_allergies', sanitize_textarea_field( $_POST['dog_allergies'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_medical_conditions'] ) ) {
+			update_field( 'dog_medical_conditions', sanitize_textarea_field( $_POST['dog_medical_conditions'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_medications'] ) ) {
+			update_field( 'dog_medications', sanitize_textarea_field( $_POST['dog_medications'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_insurance'] ) ) {
+			update_field( 'dog_insurance', sanitize_text_field( $_POST['dog_insurance'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_insurance_number'] ) ) {
+			update_field( 'dog_insurance_number', sanitize_text_field( $_POST['dog_insurance_number'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_emergency_contact'] ) ) {
+			update_field( 'dog_emergency_contact', sanitize_text_field( $_POST['dog_emergency_contact'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_emergency_phone'] ) ) {
+			update_field( 'dog_emergency_phone', sanitize_text_field( $_POST['dog_emergency_phone'] ), $dog_id );
+		}
+
+		// Diet
+		if ( isset( $_POST['dog_food_type'] ) ) {
+			update_field( 'dog_food_type', sanitize_text_field( $_POST['dog_food_type'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_food_brand'] ) ) {
+			update_field( 'dog_food_brand', sanitize_text_field( $_POST['dog_food_brand'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_food_amount'] ) ) {
+			update_field( 'dog_food_amount', intval( $_POST['dog_food_amount'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_meals_per_day'] ) ) {
+			update_field( 'dog_meals_per_day', intval( $_POST['dog_meals_per_day'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_diet_notes'] ) ) {
+			update_field( 'dog_diet_notes', sanitize_textarea_field( $_POST['dog_diet_notes'] ), $dog_id );
+		}
+
+		// Behavior
+		if ( isset( $_POST['dog_temperament'] ) && is_array( $_POST['dog_temperament'] ) ) {
+			$temperament = array_map( 'sanitize_text_field', $_POST['dog_temperament'] );
+			update_field( 'dog_temperament', $temperament, $dog_id );
+		} else {
+			update_field( 'dog_temperament', array(), $dog_id );
+		}
+		if ( isset( $_POST['dog_training_level'] ) ) {
+			update_field( 'dog_training_level', sanitize_text_field( $_POST['dog_training_level'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_behavior_notes'] ) ) {
+			update_field( 'dog_behavior_notes', sanitize_textarea_field( $_POST['dog_behavior_notes'] ), $dog_id );
+		}
+		if ( isset( $_POST['dog_notes'] ) ) {
+			update_field( 'dog_notes', sanitize_textarea_field( $_POST['dog_notes'] ), $dog_id );
+		}
 
 		// Handle photo upload
 		if ( ! empty( $_FILES['dog_foto']['name'] ) ) {
