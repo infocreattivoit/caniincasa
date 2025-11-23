@@ -564,8 +564,27 @@ add_action( 'after_setup_theme', 'caniincasa_hide_admin_bar' );
  * Block access to wp-admin for non-admin users
  */
 function caniincasa_block_wp_admin_access() {
-    // Use 'manage_options' capability instead of 'administrator' role
-    if ( is_admin() && ! current_user_can( 'manage_options' ) && ! wp_doing_ajax() ) {
+    // Don't block if we're doing AJAX or if user is not logged in
+    if ( ! is_admin() || wp_doing_ajax() || ! is_user_logged_in() ) {
+        return;
+    }
+
+    $current_user = wp_get_current_user();
+
+    // Check if user is admin: has 'administrator' role OR 'manage_options' capability
+    $is_admin = false;
+
+    if ( isset( $current_user->roles ) && is_array( $current_user->roles ) ) {
+        $is_admin = in_array( 'administrator', $current_user->roles );
+    }
+
+    // Fallback to capability check
+    if ( ! $is_admin ) {
+        $is_admin = current_user_can( 'manage_options' );
+    }
+
+    // Block non-admin users from wp-admin
+    if ( ! $is_admin ) {
         wp_redirect( home_url( '/dashboard' ) );
         exit;
     }
