@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'CANIINCASA_VERSION', '1.0.1' );
+define( 'CANIINCASA_VERSION', '1.0.2' ); // Bumped to force cache reload
 define( 'CANIINCASA_THEME_DIR', get_template_directory() );
 define( 'CANIINCASA_THEME_URI', get_template_directory_uri() );
 
