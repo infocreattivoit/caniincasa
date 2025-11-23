@@ -49,6 +49,8 @@
 
     // Initialize code - handle both pre and post DOM ready states
     function initNavigation() {
+        console.log('=== NAVIGATION INIT DEBUG ===');
+        console.log('Document ready state:', document.readyState);
 
         /**
          * Mobile Menu Toggle
@@ -58,8 +60,14 @@
         const mobileNavClose = document.querySelector('.mobile-nav-close');
         const body = document.body;
 
+        console.log('Mobile menu toggle found:', !!mobileMenuToggle);
+        console.log('Mobile nav overlay found:', !!mobileNavOverlay);
+        console.log('Mobile nav close found:', !!mobileNavClose);
+
         if (mobileMenuToggle && mobileNavOverlay) {
-            mobileMenuToggle.addEventListener('click', function() {
+            console.log('✓ Adding mobile menu click listener');
+            mobileMenuToggle.addEventListener('click', function(e) {
+                console.log('🎯 Mobile menu toggle CLICKED!');
                 mobileNavOverlay.classList.add('active');
                 body.style.overflow = 'hidden';
                 this.setAttribute('aria-expanded', 'true');
