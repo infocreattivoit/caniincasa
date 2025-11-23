@@ -239,10 +239,11 @@ class Caniincasa_My_Dog {
 			'caniincasa-my-dog',
 			'caniincasaMyDog',
 			array(
-				'ajaxurl'   => admin_url( 'admin-ajax.php' ),
-				'nonce'     => wp_create_nonce( 'my_dog_nonce' ),
-				'uploading' => __( 'Caricamento...', 'caniincasa-my-dog' ),
-				'strings'   => array(
+				'ajaxurl'      => admin_url( 'admin-ajax.php' ),
+				'nonce'        => wp_create_nonce( 'my_dog_nonce' ),
+				'uploading'    => __( 'Caricamento...', 'caniincasa-my-dog' ),
+				'dashboardUrl' => home_url( '/i-miei-cani/' ),
+				'strings'      => array(
 					'confirm_delete' => __( 'Sei sicuro di voler eliminare questo cane?', 'caniincasa-my-dog' ),
 					'error'          => __( 'Si è verificato un errore. Riprova.', 'caniincasa-my-dog' ),
 				),

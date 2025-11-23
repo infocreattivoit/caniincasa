@@ -170,4 +170,43 @@
 		});
 	});
 
+	/**
+	 * Dog Profile Form Submission
+	 */
+	$('#dog-profile-form').on('submit', function(e) {
+		e.preventDefault();
+
+		var $form = $(this);
+		var $message = $('#form-message');
+		var $submit = $form.find('button[type="submit"]');
+		var formData = new FormData(this);
+		var originalText = $submit.text();
+
+		$submit.prop('disabled', true).text(caniincasaMyDog.uploading);
+		$message.removeClass('success error').hide();
+
+		$.ajax({
+			url: caniincasaMyDog.ajaxurl,
+			type: 'POST',
+			data: formData,
+			processData: false,
+			contentType: false,
+			success: function(response) {
+				if (response.success) {
+					$message.addClass('success').text(response.data.message).fadeIn();
+					setTimeout(function() {
+						window.location.href = caniincasaMyDog.dashboardUrl;
+					}, 1500);
+				} else {
+					$message.addClass('error').text(response.data.message).fadeIn();
+					$submit.prop('disabled', false).text(originalText);
+				}
+			},
+			error: function() {
+				$message.addClass('error').text(caniincasaMyDog.strings.error).fadeIn();
+				$submit.prop('disabled', false).text(originalText);
+			}
+		});
+	});
+
 })(jQuery);

@@ -477,27 +477,3 @@ function caniincasa_modify_archive_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'caniincasa_modify_archive_query' );
-
-/**
- * TEMPORARY: Flush My Dog plugin rewrite rules
- * This runs once to re-register the dashboard rewrite rules after the fix
- */
-function caniincasa_temp_flush_my_dog_rules() {
-	// Only run once
-	if ( get_option( 'caniincasa_my_dog_rules_flushed' ) ) {
-		return;
-	}
-
-	// Check if My Dog plugin class exists
-	if ( class_exists( 'Caniincasa_My_Dog_Dashboard' ) ) {
-		// Re-add the rewrite rules
-		Caniincasa_My_Dog_Dashboard::add_rewrite_rules();
-
-		// Flush rewrite rules
-		flush_rewrite_rules();
-
-		// Set flag so this doesn't run again
-		update_option( 'caniincasa_my_dog_rules_flushed', '1' );
-	}
-}
-add_action( 'init', 'caniincasa_temp_flush_my_dog_rules', 999 );
