@@ -723,17 +723,80 @@ add_action( 'wp_ajax_nopriv_filter_centri', 'caniincasa_ajax_filter_centri' );
 
 /**
  * AJAX Handler: Filter Toelettature
- * Uses generic handler
+ * Custom handler - filters by ACF meta field instead of taxonomy
  */
 function caniincasa_ajax_filter_toelettature() {
-	caniincasa_filter_structure_handler(
-		'toelettature',
-		'filter_toelettature_nonce',
-		'struttura-card',
-		'Nessuna toelettatura trovata',
-		'strutture-pagination',
-		'Navigazione toelettature'
+	// Verify nonce
+	if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'filter_toelettature_nonce' ) ) {
+		wp_send_json_error( array( 'message' => 'Nonce verification failed' ) );
+		return;
+	}
+
+	// Get filter parameters
+	$search    = isset( $_POST['search'] ) ? sanitize_text_field( $_POST['search'] ) : '';
+	$provincia = isset( $_POST['provincia'] ) ? sanitize_text_field( $_POST['provincia'] ) : '';
+	$order     = isset( $_POST['order'] ) ? sanitize_text_field( $_POST['order'] ) : 'name_asc';
+	$paged     = isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
+
+	// Build WP_Query args
+	$args = array(
+		'post_type'      => 'toelettature',
+		'post_status'    => 'publish',
+		'posts_per_page' => 24,
+		'paged'          => $paged,
 	);
+
+	// Search by name
+	if ( ! empty( $search ) ) {
+		$args['s'] = $search;
+	}
+
+	// Filter by provincia ACF meta field
+	if ( ! empty( $provincia ) ) {
+		$args['meta_query'] = array(
+			array(
+				'key'     => 'provincia',
+				'value'   => $provincia,
+				'compare' => '=',
+			),
+		);
+	}
+
+	// Apply ordering
+	$args = caniincasa_apply_ordering( $args, $order );
+
+	// Execute query
+	$query = new WP_Query( $args );
+
+	// Render results
+	ob_start();
+	if ( $query->have_posts() ) :
+		while ( $query->have_posts() ) :
+			$query->the_post();
+			get_template_part( 'template-parts/content/content', 'struttura-card' );
+		endwhile;
+	else :
+		?>
+		<div class="no-results">
+			<h3>Nessuna toelettatura trovata</h3>
+			<p>Prova a modificare i filtri di ricerca</p>
+		</div>
+		<?php
+	endif;
+	$html = ob_get_clean();
+
+	// Generate pagination
+	$pagination = caniincasa_generate_pagination_html( $paged, $query->max_num_pages, 'strutture-pagination', 'Navigazione toelettature' );
+
+	wp_reset_postdata();
+
+	// Send response
+	wp_send_json_success( array(
+		'html'       => $html,
+		'pagination' => $pagination,
+		'found'      => $query->found_posts,
+		'pages'      => $query->max_num_pages,
+	) );
 }
 add_action( 'wp_ajax_filter_toelettature', 'caniincasa_ajax_filter_toelettature' );
 add_action( 'wp_ajax_nopriv_filter_toelettature', 'caniincasa_ajax_filter_toelettature' );
@@ -741,17 +804,80 @@ add_action( 'wp_ajax_nopriv_filter_toelettature', 'caniincasa_ajax_filter_toelet
 
 /**
  * AJAX Handler: Filter Aree Cani
- * Uses generic handler
+ * Custom handler - filters by ACF meta field instead of taxonomy
  */
 function caniincasa_ajax_filter_aree_cani() {
-	caniincasa_filter_structure_handler(
-		'aree_cani',
-		'filter_aree_cani_nonce',
-		'struttura-card',
-		'Nessuna area cani trovata',
-		'strutture-pagination',
-		'Navigazione aree cani'
+	// Verify nonce
+	if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'filter_aree_cani_nonce' ) ) {
+		wp_send_json_error( array( 'message' => 'Nonce verification failed' ) );
+		return;
+	}
+
+	// Get filter parameters
+	$search    = isset( $_POST['search'] ) ? sanitize_text_field( $_POST['search'] ) : '';
+	$provincia = isset( $_POST['provincia'] ) ? sanitize_text_field( $_POST['provincia'] ) : '';
+	$order     = isset( $_POST['order'] ) ? sanitize_text_field( $_POST['order'] ) : 'name_asc';
+	$paged     = isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
+
+	// Build WP_Query args
+	$args = array(
+		'post_type'      => 'aree_cani',
+		'post_status'    => 'publish',
+		'posts_per_page' => 24,
+		'paged'          => $paged,
 	);
+
+	// Search by name
+	if ( ! empty( $search ) ) {
+		$args['s'] = $search;
+	}
+
+	// Filter by provincia ACF meta field
+	if ( ! empty( $provincia ) ) {
+		$args['meta_query'] = array(
+			array(
+				'key'     => 'provincia',
+				'value'   => $provincia,
+				'compare' => '=',
+			),
+		);
+	}
+
+	// Apply ordering
+	$args = caniincasa_apply_ordering( $args, $order );
+
+	// Execute query
+	$query = new WP_Query( $args );
+
+	// Render results
+	ob_start();
+	if ( $query->have_posts() ) :
+		while ( $query->have_posts() ) :
+			$query->the_post();
+			get_template_part( 'template-parts/content/content', 'struttura-card' );
+		endwhile;
+	else :
+		?>
+		<div class="no-results">
+			<h3>Nessuna area cani trovata</h3>
+			<p>Prova a modificare i filtri di ricerca</p>
+		</div>
+		<?php
+	endif;
+	$html = ob_get_clean();
+
+	// Generate pagination
+	$pagination = caniincasa_generate_pagination_html( $paged, $query->max_num_pages, 'strutture-pagination', 'Navigazione aree cani' );
+
+	wp_reset_postdata();
+
+	// Send response
+	wp_send_json_success( array(
+		'html'       => $html,
+		'pagination' => $pagination,
+		'found'      => $query->found_posts,
+		'pages'      => $query->max_num_pages,
+	) );
 }
 add_action( 'wp_ajax_filter_aree_cani', 'caniincasa_ajax_filter_aree_cani' );
 add_action( 'wp_ajax_nopriv_filter_aree_cani', 'caniincasa_ajax_filter_aree_cani' );
