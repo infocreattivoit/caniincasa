@@ -11,13 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="my-dogs-dashboard">
-	<div class="dashboard-header">
-		<h1><?php _e( 'I Miei Cani', 'caniincasa-my-dog' ); ?></h1>
-		<a href="<?php echo home_url( '/i-miei-cani/aggiungi/' ); ?>" class="btn btn-primary">
-			<?php _e( '+ Aggiungi Nuovo Cane', 'caniincasa-my-dog' ); ?>
-		</a>
-	</div>
-
 	<?php if ( ! empty( $dogs ) ) : ?>
 		<div class="dogs-grid">
 			<?php foreach ( $dogs as $dog ) : ?>
