@@ -164,7 +164,7 @@ $notes = $wpdb->get_results( $wpdb->prepare(
 				<a href="<?php echo esc_url( home_url( '/i-miei-cani/' . $dog_id . '/modifica/' ) ); ?>" class="btn btn-primary">
 					✏️ <?php _e( 'Modifica Profilo', 'caniincasa-my-dog' ); ?>
 				</a>
-				<a href="<?php echo esc_url( add_query_arg( 'action', 'export_dog_pdf', home_url( '/i-miei-cani/' . $dog_id . '/' ) ) ); ?>" class="btn btn-secondary" target="_blank">
+				<a href="<?php echo esc_url( add_query_arg( 'export_dog_pdf', $dog_id, home_url() ) ); ?>" class="btn btn-secondary" target="_blank">
 					📄 <?php _e( 'Esporta PDF', 'caniincasa-my-dog' ); ?>
 				</a>
 				<button class="btn btn-danger delete-dog-btn" data-dog-id="<?php echo esc_attr( $dog_id ); ?>">
