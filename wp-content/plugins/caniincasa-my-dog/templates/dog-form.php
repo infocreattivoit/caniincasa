@@ -26,6 +26,23 @@ $dog_id = $is_edit ? $dog_post->ID : 0;
 		<div class="form-section">
 			<h3><?php _e( 'Informazioni Base', 'caniincasa-my-dog' ); ?></h3>
 
+			<?php if ( $is_edit ) : ?>
+			<div class="form-group">
+				<label for="dog_foto"><?php _e( 'Foto Profilo', 'caniincasa-my-dog' ); ?></label>
+				<?php
+				$foto = get_field( 'foto', $dog_id );
+				if ( $foto ) :
+					$foto_url = is_array( $foto ) ? $foto['url'] : $foto;
+					?>
+					<div class="current-photo">
+						<img src="<?php echo esc_url( $foto_url ); ?>" alt="<?php echo esc_attr( get_field( 'nome', $dog_id ) ); ?>">
+					</div>
+				<?php endif; ?>
+				<input type="file" id="dog_foto" name="dog_foto" accept="image/*">
+				<small><?php _e( 'Formati supportati: JPG, PNG. Max 5MB.', 'caniincasa-my-dog' ); ?></small>
+			</div>
+			<?php endif; ?>
+
 			<div class="form-row">
 				<div class="form-group">
 					<label for="dog_nome"><?php _e( 'Nome del Cane', 'caniincasa-my-dog' ); ?> *</label>
