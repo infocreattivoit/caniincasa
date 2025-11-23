@@ -571,18 +571,6 @@ function caniincasa_block_wp_admin_access() {
 
     $current_user = wp_get_current_user();
 
-    // DEBUG: Log current page and user info
-    $current_screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-    $page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : 'N/A';
-
-    error_log( '=== ADMIN ACCESS CHECK ===' );
-    error_log( 'User ID: ' . $current_user->ID );
-    error_log( 'Username: ' . $current_user->user_login );
-    error_log( 'Roles: ' . print_r( $current_user->roles, true ) );
-    error_log( 'Current screen: ' . ( $current_screen ? $current_screen->id : 'NULL' ) );
-    error_log( 'Page param: ' . $page );
-    error_log( 'manage_options: ' . ( current_user_can( 'manage_options' ) ? 'YES' : 'NO' ) );
-
     // Check if user is admin: has 'administrator' role OR 'manage_options' capability
     $is_admin = false;
 
@@ -595,18 +583,14 @@ function caniincasa_block_wp_admin_access() {
         $is_admin = current_user_can( 'manage_options' );
     }
 
-    error_log( 'Is Admin: ' . ( $is_admin ? 'YES' : 'NO' ) );
-
     // Block non-admin users from wp-admin
     if ( ! $is_admin ) {
-        error_log( 'REDIRECTING to /dashboard' );
         wp_redirect( home_url( '/dashboard' ) );
         exit;
     }
-
-    error_log( 'ACCESS GRANTED' );
 }
-add_action( 'admin_init', 'caniincasa_block_wp_admin_access' );
+// Execute with low priority (999) to run after all other admin_init hooks
+add_action( 'admin_init', 'caniincasa_block_wp_admin_access', 999 );
 
 /**
  * Redirect to custom login page
