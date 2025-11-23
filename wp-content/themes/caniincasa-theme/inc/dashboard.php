@@ -601,10 +601,17 @@ function caniincasa_redirect_login_page() {
     $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
     $page_viewed = basename( wp_parse_url( $request_uri, PHP_URL_PATH ) );
 
+    // Don't redirect logout, register, lostpassword, or other wp-login.php actions
+    $action = isset( $_GET['action'] ) ? sanitize_text_field( wp_unslash( $_GET['action'] ) ) : '';
+    $allowed_actions = array( 'logout', 'register', 'lostpassword', 'rp', 'resetpass', 'postpass' );
+
     // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
     if ( $page_viewed === 'wp-login.php' && isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'GET' ) {
-        wp_safe_redirect( $login_page );
-        exit;
+        // Allow logout and other special actions
+        if ( ! in_array( $action, $allowed_actions ) ) {
+            wp_safe_redirect( $login_page );
+            exit;
+        }
     }
 }
 add_action( 'init', 'caniincasa_redirect_login_page' );
