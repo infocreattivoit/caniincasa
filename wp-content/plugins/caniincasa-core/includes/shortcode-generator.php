@@ -110,10 +110,22 @@ add_action( 'wp_ajax_caniincasa_search_posts_for_grid', 'caniincasa_ajax_search_
 function caniincasa_render_shortcode_generator_page() {
     ?>
     <div class="wrap">
-        <h1>Generatore Shortcode Griglia</h1>
-        <p class="description">Crea shortcode per visualizzare griglie di contenuti selezionati.</p>
+        <h1>Generatore Shortcode</h1>
+        <p class="description">Crea shortcode per griglie di contenuti e box CTA personalizzati.</p>
+
+        <!-- Tab Navigation -->
+        <h2 class="nav-tab-wrapper">
+            <a href="#tab-grid" class="nav-tab nav-tab-active" data-tab="grid">Griglia Contenuti</a>
+            <a href="#tab-cta" class="nav-tab" data-tab="cta">CTA Box</a>
+        </h2>
 
         <style>
+            .tab-content {
+                display: none;
+            }
+            .tab-content.active {
+                display: block;
+            }
             .shortcode-generator-wrap {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -228,8 +240,27 @@ function caniincasa_render_shortcode_generator_page() {
             .style-4col .style-preview { grid-template-columns: 1fr 1fr 1fr 1fr; }
             .style-list .style-preview { grid-template-columns: 1fr; }
             .select2-container { width: 100% !important; max-width: 400px; }
+            .cta-style-preview {
+                height: 60px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: 600;
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+            .style-gradient-blue-orange { background: linear-gradient(135deg, #306587 0%, #ff850c 100%); }
+            .style-gradient-purple-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+            .style-gradient-green-blue { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+            .style-gradient-orange-red { background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%); }
+            .style-solid-blue { background: #306587; }
+            .style-solid-orange { background: #ff850c; }
         </style>
 
+        <!-- Tab: Griglia Contenuti -->
+        <div id="tab-grid" class="tab-content active">
         <div class="shortcode-generator-wrap">
             <!-- Left Panel: Configuration -->
             <div class="generator-panel">
@@ -331,7 +362,198 @@ function caniincasa_render_shortcode_generator_page() {
                 </div>
             </div>
         </div>
+        </div><!-- End Tab Grid -->
+
+        <!-- Tab: CTA Box -->
+        <div id="tab-cta" class="tab-content">
+        <div class="shortcode-generator-wrap">
+            <!-- Left Panel: Configuration CTA -->
+            <div class="generator-panel">
+                <h2>Configurazione CTA Box</h2>
+
+                <div class="form-field">
+                    <label for="cta-title">Titolo* <span style="color: #d63638;">obbligatorio</span></label>
+                    <input type="text" id="cta-title" class="regular-text" placeholder="Es: Cerchi o Offri Cuccioli?">
+                </div>
+
+                <div class="form-field">
+                    <label for="cta-subtitle">Sottotitolo</label>
+                    <textarea id="cta-subtitle" class="large-text" rows="2" placeholder="Es: Pubblica il tuo annuncio gratuitamente e raggiungi migliaia di appassionati!"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="cta-button-text">Testo Pulsante* <span style="color: #d63638;">obbligatorio</span></label>
+                    <input type="text" id="cta-button-text" class="regular-text" placeholder="Es: Inserisci Annuncio">
+                </div>
+
+                <div class="form-field">
+                    <label for="cta-button-link">Link Pulsante* <span style="color: #d63638;">obbligatorio</span></label>
+                    <input type="url" id="cta-button-link" class="regular-text" placeholder="Es: /annunci/nuovo/">
+                    <p class="description">Inserisci URL completo (https://...) o relativo (/pagina/)</p>
+                </div>
+
+                <div class="form-field">
+                    <label for="cta-icon">Icona Emoji</label>
+                    <input type="text" id="cta-icon" class="regular-text" value="🐾" maxlength="2">
+                    <p class="description">Inserisci una emoji (default: 🐾). Lascia vuoto per nessuna icona.</p>
+                </div>
+
+                <div class="form-field">
+                    <label>Stile Gradiente</label>
+                    <div class="grid-style-options">
+                        <div class="grid-style-option selected" data-cta-style="gradient-blue-orange">
+                            <div class="cta-style-preview style-gradient-blue-orange">Box</div>
+                            <small>Blu/Arancio</small>
+                        </div>
+                        <div class="grid-style-option" data-cta-style="gradient-purple-blue">
+                            <div class="cta-style-preview style-gradient-purple-blue">Box</div>
+                            <small>Viola/Blu</small>
+                        </div>
+                        <div class="grid-style-option" data-cta-style="gradient-green-blue">
+                            <div class="cta-style-preview style-gradient-green-blue">Box</div>
+                            <small>Verde/Blu</small>
+                        </div>
+                        <div class="grid-style-option" data-cta-style="gradient-orange-red">
+                            <div class="cta-style-preview style-gradient-orange-red">Box</div>
+                            <small>Arancio/Rosso</small>
+                        </div>
+                        <div class="grid-style-option" data-cta-style="solid-blue">
+                            <div class="cta-style-preview style-solid-blue">Box</div>
+                            <small>Blu Solido</small>
+                        </div>
+                        <div class="grid-style-option" data-cta-style="solid-orange">
+                            <div class="cta-style-preview style-solid-orange">Box</div>
+                            <small>Arancio Solido</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="cta-features">Caratteristiche (opzionale)</label>
+                    <textarea id="cta-features" class="large-text" rows="3" placeholder="Una caratteristica per riga&#10;Annunci verificati&#10;Massima visibilità&#10;Contatti diretti"></textarea>
+                    <p class="description">Inserisci una caratteristica per riga. Verranno mostrate con checkmark ✓</p>
+                </div>
+            </div>
+
+            <!-- Right Panel: Output CTA -->
+            <div class="generator-panel">
+                <h2>Shortcode Generato</h2>
+
+                <div class="shortcode-output" id="cta-shortcode-output">
+                    [cta_box title="..." button_text="..." button_link="..."]
+                </div>
+
+                <button type="button" class="button button-primary copy-btn" id="copy-cta-shortcode">
+                    Copia Shortcode
+                </button>
+                <span id="cta-copy-feedback" style="margin-left: 10px; color: #00a32a; display: none;">Copiato!</span>
+
+                <div class="preview-section">
+                    <h3>Anteprima</h3>
+                    <p class="description">L'anteprima mostra come apparirà il CTA Box nel frontend.</p>
+                    <div id="cta-preview" style="border: 1px solid #ddd; padding: 20px; background: #f9f9f9; min-height: 200px;">
+                        <p style="text-align: center; color: #666;">Compila i campi obbligatori per vedere l'anteprima</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div><!-- End Tab CTA -->
+
     </div>
+
+    <script>
+    jQuery(document).ready(function($) {
+        // Tab switching
+        $('.nav-tab').on('click', function(e) {
+            e.preventDefault();
+            var tab = $(this).data('tab');
+
+            $('.nav-tab').removeClass('nav-tab-active');
+            $(this).addClass('nav-tab-active');
+
+            $('.tab-content').removeClass('active');
+            $('#tab-' + tab).addClass('active');
+        });
+
+        // CTA Box Generator
+        var ctaStyle = 'gradient-blue-orange';
+
+        function updateCTAShortcode() {
+            var title = $('#cta-title').val();
+            var subtitle = $('#cta-subtitle').val();
+            var buttonText = $('#cta-button-text').val();
+            var buttonLink = $('#cta-button-link').val();
+            var icon = $('#cta-icon').val();
+            var features = $('#cta-features').val();
+
+            if (!title || !buttonText || !buttonLink) {
+                $('#cta-shortcode-output').text('[cta_box title="..." button_text="..." button_link="..."]');
+                $('#cta-preview').html('<p style="text-align: center; color: #666;">Compila i campi obbligatori per vedere l\'anteprima</p>');
+                return;
+            }
+
+            // Build shortcode
+            var shortcode = '[cta_box';
+            shortcode += ' title="' + title.replace(/"/g, '&quot;') + '"';
+
+            if (subtitle) {
+                shortcode += ' subtitle="' + subtitle.replace(/"/g, '&quot;') + '"';
+            }
+
+            shortcode += ' button_text="' + buttonText.replace(/"/g, '&quot;') + '"';
+            shortcode += ' button_link="' + buttonLink + '"';
+
+            if (icon) {
+                shortcode += ' icon="' + icon + '"';
+            }
+
+            if (ctaStyle !== 'gradient-blue-orange') {
+                shortcode += ' style="' + ctaStyle + '"';
+            }
+
+            if (features) {
+                var featuresArray = features.split('\n').filter(f => f.trim());
+                if (featuresArray.length > 0) {
+                    shortcode += ' features="' + featuresArray.join('|') + '"';
+                }
+            }
+
+            shortcode += ']';
+
+            $('#cta-shortcode-output').text(shortcode);
+
+            // Preview
+            $.post(ajaxurl, {
+                action: 'caniincasa_preview_cta_box',
+                nonce: shortcodeGeneratorData.nonce,
+                shortcode: shortcode
+            }, function(response) {
+                if (response.success) {
+                    $('#cta-preview').html(response.data.html);
+                }
+            });
+        }
+
+        // CTA style selection
+        $('[data-cta-style]').on('click', function() {
+            $('[data-cta-style]').removeClass('selected');
+            $(this).addClass('selected');
+            ctaStyle = $(this).data('cta-style');
+            updateCTAShortcode();
+        });
+
+        // CTA inputs
+        $('#cta-title, #cta-subtitle, #cta-button-text, #cta-button-link, #cta-icon, #cta-features').on('input', updateCTAShortcode);
+
+        // Copy CTA shortcode
+        $('#copy-cta-shortcode').on('click', function() {
+            var shortcode = $('#cta-shortcode-output').text();
+            navigator.clipboard.writeText(shortcode).then(function() {
+                $('#cta-copy-feedback').fadeIn().delay(2000).fadeOut();
+            });
+        });
+    });
+    </script>
     <?php
 }
 
@@ -574,3 +796,26 @@ function caniincasa_ajax_preview_grid_shortcode() {
     wp_send_json_success( array( 'html' => $html ) );
 }
 add_action( 'wp_ajax_caniincasa_preview_grid_shortcode', 'caniincasa_ajax_preview_grid_shortcode' );
+
+/**
+ * AJAX: Get CTA Box preview
+ */
+function caniincasa_ajax_preview_cta_box() {
+    check_ajax_referer( 'shortcode_generator_nonce', 'nonce' );
+
+    if ( ! current_user_can( 'edit_posts' ) ) {
+        wp_send_json_error( 'Permesso negato' );
+    }
+
+    $shortcode = isset( $_POST['shortcode'] ) ? wp_kses_post( $_POST['shortcode'] ) : '';
+
+    if ( empty( $shortcode ) ) {
+        wp_send_json_error( 'Shortcode vuoto' );
+    }
+
+    // Execute shortcode and return HTML
+    $html = do_shortcode( $shortcode );
+
+    wp_send_json_success( array( 'html' => $html ) );
+}
+add_action( 'wp_ajax_caniincasa_preview_cta_box', 'caniincasa_ajax_preview_cta_box' );
