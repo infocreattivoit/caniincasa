@@ -7,6 +7,10 @@
 (function() {
     'use strict';
 
+    // DEBUG: Verify script is loading
+    alert('Navigation.js is LOADING!');
+    console.log('Navigation.js file is executing');
+
     /**
      * Throttle function - limits how often a function can fire
      * Essential for scroll/resize events to prevent performance issues
