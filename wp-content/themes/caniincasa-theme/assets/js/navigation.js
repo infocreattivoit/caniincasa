@@ -7,10 +7,6 @@
 (function() {
     'use strict';
 
-    // DEBUG: Verify script is loading
-    alert('Navigation.js is LOADING!');
-    console.log('Navigation.js file is executing');
-
     /**
      * Throttle function - limits how often a function can fire
      * Essential for scroll/resize events to prevent performance issues
@@ -53,8 +49,6 @@
 
     // Initialize code - handle both pre and post DOM ready states
     function initNavigation() {
-        console.log('=== NAVIGATION INIT DEBUG ===');
-        console.log('Document ready state:', document.readyState);
 
         /**
          * Mobile Menu Toggle
@@ -64,14 +58,9 @@
         const mobileNavClose = document.querySelector('.mobile-nav-close');
         const body = document.body;
 
-        console.log('Mobile menu toggle found:', !!mobileMenuToggle);
-        console.log('Mobile nav overlay found:', !!mobileNavOverlay);
-        console.log('Mobile nav close found:', !!mobileNavClose);
-
         if (mobileMenuToggle && mobileNavOverlay) {
-            console.log('✓ Adding mobile menu click listener');
             mobileMenuToggle.addEventListener('click', function(e) {
-                console.log('🎯 Mobile menu toggle CLICKED!');
+                e.preventDefault();
                 mobileNavOverlay.classList.add('active');
                 body.style.overflow = 'hidden';
                 this.setAttribute('aria-expanded', 'true');
@@ -424,12 +413,9 @@
     }
 
     // Execute immediately if DOM is already ready, otherwise wait
-    alert('About to check readyState: ' + document.readyState);
     if (document.readyState === 'loading') {
-        alert('DOM loading, waiting for DOMContentLoaded');
         document.addEventListener('DOMContentLoaded', initNavigation);
     } else {
-        alert('DOM ready, calling initNavigation immediately');
         // DOM is already ready, execute immediately
         initNavigation();
     }
