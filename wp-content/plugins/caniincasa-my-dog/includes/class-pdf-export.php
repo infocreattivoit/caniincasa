@@ -15,7 +15,7 @@ class Caniincasa_My_Dog_PDF {
 	 * Initialize
 	 */
 	public static function init() {
-		add_action( 'init', array( __CLASS__, 'handle_pdf_export' ) );
+		add_action( 'template_redirect', array( __CLASS__, 'handle_pdf_export' ) );
 	}
 
 	/**
