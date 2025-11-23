@@ -47,8 +47,8 @@
         };
     }
 
-    // Wait for DOM to be ready
-    document.addEventListener('DOMContentLoaded', function() {
+    // Initialize code - handle both pre and post DOM ready states
+    function initNavigation() {
 
         /**
          * Mobile Menu Toggle
@@ -409,6 +409,14 @@
             });
         });
 
-    });
+    }
+
+    // Execute immediately if DOM is already ready, otherwise wait
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNavigation);
+    } else {
+        // DOM is already ready, execute immediately
+        initNavigation();
+    }
 
 })();
