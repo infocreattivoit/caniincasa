@@ -232,8 +232,8 @@ function caniincasa_scripts() {
     // Main JavaScript
     wp_enqueue_script( 'caniincasa-main', CANIINCASA_THEME_URI . '/assets/js/main.js', array( 'jquery' ), CANIINCASA_VERSION, true );
 
-    // Navigation script - depends on jQuery to ensure proper load order with plugins
-    wp_enqueue_script( 'caniincasa-navigation', CANIINCASA_THEME_URI . '/assets/js/navigation.js', array( 'jquery' ), CANIINCASA_VERSION, true );
+    // NOTE: Navigation script is enqueued separately with priority 999 to load AFTER all plugins
+    // See caniincasa_enqueue_navigation() function below
 
     // Annunci submission script (conditional)
     if ( is_page_template( 'template-pubblica-annuncio.php' ) ) {
@@ -253,6 +253,24 @@ function caniincasa_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'caniincasa_scripts' );
+
+/**
+ * Enqueue navigation script with very high priority
+ *
+ * This ensures navigation.js loads AFTER all plugin scripts (including My Dog plugin)
+ * to prevent JavaScript conflicts that block mobile menu functionality.
+ * Priority 999 = loads last
+ */
+function caniincasa_enqueue_navigation() {
+    wp_enqueue_script(
+        'caniincasa-navigation',
+        CANIINCASA_THEME_URI . '/assets/js/navigation.js',
+        array( 'jquery' ),
+        CANIINCASA_VERSION,
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'caniincasa_enqueue_navigation', 999 );
 
 /**
  * Block wp-admin access for non-admin users
