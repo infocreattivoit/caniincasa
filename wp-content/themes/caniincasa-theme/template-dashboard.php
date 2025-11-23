@@ -734,6 +734,15 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset( $_POST['caniincasa_dashboar
                                                 <button class="message-action-btn view-message-btn" data-message-id="<?php echo esc_attr( $message['id'] ); ?>">
                                                     <?php esc_html_e( 'Visualizza', 'caniincasa' ); ?>
                                                 </button>
+                                                <?php if ( $message['reply_count'] > 0 ) : ?>
+                                                    <button class="message-action-btn btn-reply-message"
+                                                        data-message-id="<?php echo esc_attr( $message['id'] ); ?>"
+                                                        data-recipient-id="<?php echo esc_attr( $message['recipient_id'] ); ?>"
+                                                        data-recipient-name="<?php echo esc_attr( $message['recipient_name'] ); ?>"
+                                                        data-subject="<?php echo esc_attr( $message['subject'] ); ?>">
+                                                        <?php esc_html_e( 'Rispondi', 'caniincasa' ); ?>
+                                                    </button>
+                                                <?php endif; ?>
                                                 <button class="message-action-btn delete-message-btn" data-message-id="<?php echo esc_attr( $message['id'] ); ?>">
                                                     <?php esc_html_e( 'Elimina', 'caniincasa' ); ?>
                                                 </button>
