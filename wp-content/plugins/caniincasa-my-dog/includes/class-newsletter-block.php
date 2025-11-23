@@ -15,11 +15,15 @@ class Caniincasa_My_Dog_Newsletter_Block {
 	 * Initialize
 	 */
 	public static function init() {
+		// TEMPORARILY DISABLED - Newsletter block was breaking footer rendering
+		// The inline jQuery script runs BEFORE jQuery is loaded, causing page truncation
+		/*
 		// Add newsletter block before footer
 		add_action( 'caniincasa_before_footer', array( __CLASS__, 'render_newsletter_block' ) );
 
 		// Shortcode
 		add_shortcode( 'newsletter_signup', array( __CLASS__, 'shortcode' ) );
+		*/
 	}
 
 	/**

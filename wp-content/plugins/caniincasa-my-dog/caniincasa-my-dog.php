@@ -225,9 +225,7 @@ class Caniincasa_My_Dog {
 			CANIINCASA_MY_DOG_VERSION
 		);
 
-		// JS - TEMPORARILY DISABLED FOR TESTING
-		// If menu works with this commented, the problem is in my-dog.js
-		/*
+		// JS
 		wp_enqueue_script(
 			'caniincasa-my-dog',
 			CANIINCASA_MY_DOG_URL . 'assets/js/my-dog.js',
@@ -251,7 +249,6 @@ class Caniincasa_My_Dog {
 				),
 			)
 		);
-		*/
 	}
 
 	/**
