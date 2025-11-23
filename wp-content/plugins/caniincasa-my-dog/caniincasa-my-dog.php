@@ -65,7 +65,6 @@ class Caniincasa_My_Dog {
 		require_once CANIINCASA_MY_DOG_PATH . 'includes/class-ajax-handlers.php';
 		require_once CANIINCASA_MY_DOG_PATH . 'includes/class-calendar.php';
 		require_once CANIINCASA_MY_DOG_PATH . 'includes/class-pdf-export.php';
-		require_once CANIINCASA_MY_DOG_PATH . 'includes/class-newsletter-block.php';
 		require_once CANIINCASA_MY_DOG_PATH . 'includes/class-calculators.php';
 
 		// Admin
@@ -193,7 +192,6 @@ class Caniincasa_My_Dog {
 		Caniincasa_My_Dog_AJAX::init();
 		Caniincasa_My_Dog_Calendar::init();
 		Caniincasa_My_Dog_PDF::init();
-		Caniincasa_My_Dog_Newsletter_Block::init();
 		Caniincasa_My_Dog_Calculators::init();
 
 		// Admin
