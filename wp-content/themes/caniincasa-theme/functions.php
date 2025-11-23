@@ -232,8 +232,8 @@ function caniincasa_scripts() {
     // Main JavaScript
     wp_enqueue_script( 'caniincasa-main', CANIINCASA_THEME_URI . '/assets/js/main.js', array( 'jquery' ), CANIINCASA_VERSION, true );
 
-    // Navigation script
-    wp_enqueue_script( 'caniincasa-navigation', CANIINCASA_THEME_URI . '/assets/js/navigation.js', array(), CANIINCASA_VERSION, true );
+    // Navigation script - depends on jQuery to ensure proper load order with plugins
+    wp_enqueue_script( 'caniincasa-navigation', CANIINCASA_THEME_URI . '/assets/js/navigation.js', array( 'jquery' ), CANIINCASA_VERSION, true );
 
     // Annunci submission script (conditional)
     if ( is_page_template( 'template-pubblica-annuncio.php' ) ) {
