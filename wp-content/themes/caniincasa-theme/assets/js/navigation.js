@@ -50,6 +50,9 @@
     // Initialize code - handle both pre and post DOM ready states
     function initNavigation() {
 
+        console.log('[DEBUG] initNavigation started');
+        console.log('[DEBUG] document.readyState:', document.readyState);
+
         /**
          * Mobile Menu Toggle
          */
@@ -58,12 +61,20 @@
         const mobileNavClose = document.querySelector('.mobile-nav-close');
         const body = document.body;
 
+        console.log('[DEBUG] mobileMenuToggle:', mobileMenuToggle);
+        console.log('[DEBUG] mobileNavOverlay:', mobileNavOverlay);
+        console.log('[DEBUG] mobileNavClose:', mobileNavClose);
+
         if (mobileMenuToggle && mobileNavOverlay) {
+            console.log('[DEBUG] Adding click listener to mobile menu toggle');
+
             mobileMenuToggle.addEventListener('click', function(e) {
+                console.log('[DEBUG] Mobile menu toggle clicked!');
                 e.preventDefault();
                 mobileNavOverlay.classList.add('active');
                 body.style.overflow = 'hidden';
                 this.setAttribute('aria-expanded', 'true');
+                console.log('[DEBUG] Mobile menu should be open now');
             });
 
             if (mobileNavClose) {
@@ -413,9 +424,13 @@
     }
 
     // Execute immediately if DOM is already ready, otherwise wait
+    console.log('[DEBUG] navigation.js LOADED - checking readyState');
+
     if (document.readyState === 'loading') {
+        console.log('[DEBUG] DOM still loading, waiting for DOMContentLoaded');
         document.addEventListener('DOMContentLoaded', initNavigation);
     } else {
+        console.log('[DEBUG] DOM already ready, executing initNavigation immediately');
         // DOM is already ready, execute immediately
         initNavigation();
     }
