@@ -553,7 +553,8 @@ function caniincasa_get_user_types() {
  * Hide admin bar for non-admin users
  */
 function caniincasa_hide_admin_bar() {
-    if ( ! current_user_can( 'administrator' ) ) {
+    // Use 'manage_options' capability instead of 'administrator' role
+    if ( ! current_user_can( 'manage_options' ) ) {
         show_admin_bar( false );
     }
 }
@@ -563,7 +564,8 @@ add_action( 'after_setup_theme', 'caniincasa_hide_admin_bar' );
  * Block access to wp-admin for non-admin users
  */
 function caniincasa_block_wp_admin_access() {
-    if ( is_admin() && ! current_user_can( 'administrator' ) && ! wp_doing_ajax() ) {
+    // Use 'manage_options' capability instead of 'administrator' role
+    if ( is_admin() && ! current_user_can( 'manage_options' ) && ! wp_doing_ajax() ) {
         wp_redirect( home_url( '/dashboard' ) );
         exit;
     }
@@ -615,10 +617,12 @@ function caniincasa_redirect_after_login( $redirect_to, $request, $user ) {
     }
 
     // Redirect to dashboard for non-admin users
-    if ( ! is_wp_error( $user ) && ! current_user_can( 'administrator', $user ) ) {
+    // IMPORTANT: Use user_can() with capability, not current_user_can() with role
+    if ( ! is_wp_error( $user ) && ! user_can( $user, 'manage_options' ) ) {
         return home_url( '/dashboard' );
     }
 
+    // Admin users go to wp-admin
     return $redirect_to;
 }
 add_filter( 'login_redirect', 'caniincasa_redirect_after_login', 10, 3 );
