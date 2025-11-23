@@ -37,22 +37,43 @@ function caniincasa_rest_basic_auth_handler( $user_id ) {
 
 	// Verifica se ci sono credenziali Basic Auth
 	if ( ! isset( $_SERVER['PHP_AUTH_USER'] ) ) {
+		// Debug: nessun header Basic Auth trovato
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( 'REST Auth: Nessun header PHP_AUTH_USER trovato. Verifica che il server supporti Basic Auth.' );
+		}
 		return $user_id;
 	}
 
 	$username = $_SERVER['PHP_AUTH_USER'];
 	$password = $_SERVER['PHP_AUTH_PW'];
 
+	// Debug: tentativo autenticazione
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		error_log( sprintf( 'REST Auth: Tentativo autenticazione per utente: %s', $username ) );
+	}
+
 	// Prova autenticazione con Application Password
 	$user = wp_authenticate_application_password( null, $username, $password );
 
 	if ( is_wp_error( $user ) ) {
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( sprintf( 'REST Auth: Application Password fallita: %s', $user->get_error_message() ) );
+		}
+
 		// Se fallisce, prova autenticazione normale (deprecato, solo per fallback)
 		$user = wp_authenticate( $username, $password );
+
+		if ( is_wp_error( $user ) ) {
+			if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+				error_log( sprintf( 'REST Auth: Autenticazione normale fallita: %s', $user->get_error_message() ) );
+			}
+			return $user_id;
+		}
 	}
 
-	if ( is_wp_error( $user ) ) {
-		return $user_id;
+	// Debug: autenticazione riuscita
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		error_log( sprintf( 'REST Auth: Autenticazione riuscita per utente ID: %d', $user->ID ) );
 	}
 
 	return $user->ID;
@@ -105,4 +126,42 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			error_log( 'Basic Auth rilevato per utente: ' . $_SERVER['PHP_AUTH_USER'] );
 		}
 	});
+}
+
+/**
+ * Endpoint di test autenticazione
+ * GET /wp-json/caniincasa/v1/auth-test
+ */
+add_action( 'rest_api_init', function() {
+	register_rest_route( 'caniincasa/v1', '/auth-test', array(
+		'methods'  => 'GET',
+		'callback' => 'caniincasa_rest_auth_test',
+		'permission_callback' => '__return_true',
+	) );
+} );
+
+function caniincasa_rest_auth_test() {
+	$current_user = wp_get_current_user();
+
+	if ( $current_user->ID ) {
+		return array(
+			'success' => true,
+			'message' => 'Autenticazione riuscita!',
+			'user'    => array(
+				'id'       => $current_user->ID,
+				'username' => $current_user->user_login,
+				'email'    => $current_user->user_email,
+				'roles'    => $current_user->roles,
+			),
+		);
+	} else {
+		return array(
+			'success' => false,
+			'message' => 'Autenticazione fallita. Nessun utente loggato.',
+			'debug'   => array(
+				'php_auth_user' => isset( $_SERVER['PHP_AUTH_USER'] ) ? $_SERVER['PHP_AUTH_USER'] : 'non trovato',
+				'authorization_header' => isset( $_SERVER['HTTP_AUTHORIZATION'] ) ? 'presente' : 'assente',
+			),
+		);
+	}
 }
